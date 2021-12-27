@@ -3,13 +3,17 @@
 // @namespace		https://github.com/sn-o-w/ig-dark-mode
 // @description	Dark mode implementation for Instagram.
 // @author			Snow
-// @version			0.2
+// @version			0.2.2
 // @match				*://www.instagram.com/*
 // @updateURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL	https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @run-at			document-start
 // ==/UserScript==
 (function() {var css = [
+	"/* Define dark mode to get specific scrollbars */",
+	":root {",
+	"    color-scheme: dark !important;",
+	"}",
 	"/* Black background for <body>, useful in the first milisecs when the page is loaded */",
 	"body {",
 	"    background: rgb(7, 7, 7) !important;",
@@ -76,6 +80,13 @@
 	"    color: #fff !important;",
 	"}",
 	"",
+	"/* Add border shadow for \"Now you can create and share posts directly from your computer\" (it appears first seconds after you log into your account) */",
+	"/* iMofo also used for other elements such as the rectangle box appearing within any DM for \"Like | Copy | Unsend\" */",
+	".iMofo {",
+	"    -webkit-box-shadow: rgba(255,255,255,.3) 0 4px 22px !important;",
+	"    box-shadow: rgba(255,255,255,.3) 0 4px 22px !important;",
+	"}",
+	"",
 	"/* Followed hashtags (just click on the \"Following\", then \"Hashtags\") */",
 	".hI7cq, .hI7cq:visited {",
 	"    color: #fff !important;",
@@ -86,7 +97,7 @@
 	"",
 	"/* Inside \"Switch Accounts\", the circle border for accounts' pics is barely visible, let's fix this */",
 	"._2dbep::after {",
-	"    border: 1px solid #1c1c1c !important;",
+	"    border: 1px solid rgba(255,255,255,.15) !important;",  /* #1c1c1c */
 	"}",
 	"",
 	"/* \"Create New Post\" -> Photo: \"Filters\" and \"Adjustments\" + button when you add multiple photos/videos + background for photo + elements for video*/",
@@ -168,8 +179,8 @@
 	"",
 	"/* White shadow for account dropdown menu + Activity menu at the top right + search results rectangular thing */",
 	".uo5MA, .AvhYw {",
-	"    -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.2) !important;",
-	"    box-shadow: 0 0 5px 1px rgba(255,255,255,.2) !important;",
+	"    -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.4) !important;",
+	"    box-shadow: 0 0 5px 1px rgba(255,255,255,.4) !important;",
 	"}",
 	"",
 	"/* White shadow for \"New Posts\" button (very tricky to make it appearing, just refresh page and scroll down fast, if you don't scroll down the main feed might automatically update, preventing \"New Posts\" to show up) */",
@@ -181,21 +192,21 @@
 	"/* Logo visible at the top left, except Stories page */",
 	"/* Added :not(a) to not invert Instagram logo appearing while viewing Stories */",
 	"/* Added orange-ish color for ::selection to imitate the blue selection rectangle + light gray for ::selection:window-inactive for dark gray-ish of selection while inactive window (notice we do this to display the inverted color!) */",
-	":not(a) > .s4Iyt {",
+	".cq2ai > .s4Iyt {",
 	"    filter: invert(1) !important;",
 	"}",
-	":not(a) > .s4Iyt::selection {",
+	".cq2ai > .s4Iyt::selection {",
 	"    background-color: #ffa232 !important;",
 	"}",
-	":not(a) > .s4Iyt::selection:window-inactive {",
+	".cq2ai > .s4Iyt::selection:window-inactive {",
 	"    background-color: #9d9d9d !important;",
 	"}",
 	"/* Specific rectangle blue selection within Firefox for Instagram logo */",
-	":not(a) > .s4Iyt::-moz-selection {",
+	".cq2ai > .s4Iyt::-moz-selection {",
 	"    background-color: #ff8728 !important;",
 	"}",
 	"/* The above doesn't/can't work for Firefox, lol. Within Firefox you cannot change color of any selection when window is inactive. :( */",
-	":not(a) > .s4Iyt::-moz-selection:-moz-window-inactive {",
+	".cq2ai > .s4Iyt::-moz-selection:-moz-window-inactive {",
 	"    background-color: #a5a5a5 !important;",
 	"}",
 	"",
@@ -261,7 +272,7 @@
 	"",
 	"/* Text on disabled/inactive blue buttons */",
 	".L3NKy[disabled] {",
-	"    color: rgba(104, 94, 94, 1) !important;",
+	"    color: rgb(104, 94, 94) !important;",
 	"}",
 	"",
 	"/* Reload button */",
@@ -307,6 +318,7 @@
 	"/* The bottom long line for \"Sensitive Content\", above \"See Video\" (in both stories and posts) */",
 
 /* W4P49 used for other elements as well, need more time to investigate */
+/* https://instagram.com/tv/CLRY4dFnPNu/ */
 /*
 	".W4P49 {",
 	"    background-color: #dbdbdb !important;",
@@ -323,6 +335,9 @@
 	"}",
 	".LpqwJ {",
 	"    background: #000 !important;",
+	"}",
+	".jctW7 .W4P49 {",
+	"    background-color: #9b9b9b !important;",
 	"}",
 	"",
 	"/* Lighter loading circle (some elements that are not really the loading circle have no [style], so add [style]) */",
@@ -399,7 +414,10 @@
 	"span[data-bloks-name=\"bk.components.Text\"][style*=\"white-space: pre-wrap\"] {",
 	"    font-weight: 500 !important;",
 	"}",
-	"div[data-bloks-name=\"ig.components.screens.Navbar\"] ._8-yf5[color=\"#262626\"], div[data-bloks-name=\"ig.components.screens.Screen\"] [data-visualcompletion=\"loading-state\"][style] {",
+	"div[data-bloks-name=\"ig.components.screens.Navbar\"] ._8-yf5[color=\"#262626\"] {",
+	"    fill: #fff !important;",
+	"}",
+	"div[data-bloks-name=\"ig.components.screens.Screen\"] [data-visualcompletion=\"loading-state\"][style] {",
 	"    filter: invert(0) !important;",
 	"}",
 	"span[data-bloks-name=\"bk.components.Text\"]::selection, span[data-bloks-name=\"bk.components.TextSpan\"]::selection, div[data-bloks-name=\"ig.components.screens.Navbar\"]>div>div:nth-child(2)::selection {",
