@@ -3,7 +3,7 @@
 // @namespace		https://github.com/sn-o-w/ig-dark-mode
 // @description	Dark mode implementation for Instagram.
 // @author			Snow
-// @version			0.2.5
+// @version			0.3
 // @match				*://www.instagram.com/*
 // @updateURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL	https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -100,9 +100,10 @@
 	"    border: 1.5px solid #fff !important;",
 	"}",
 	"",
-	"/* Inside \"Switch Accounts\", the circle border for accounts' pics is barely visible, let's fix this */",
-	"._2dbep::after {",
-	"    border: 1px solid rgba(255,255,255,.15) !important;",
+	"/* Inside \"Switch Accounts\", the circle border for accounts' pics is barely visible, let's fix this + all border circle for profile pics */",
+	"/* Added \":not(.edq1N)>:not(._295C2)\" + \":not(.B7GUE)>:not(.RR-M-)\" to not modify circle borders within Stories page */",
+	":not(.edq1N)>:not(._295C2)>._2dbep::after, :not(.B7GUE)>:not(.RR-M-)>._2dbep::after {",
+	"    border: 1px solid rgba(255,255,255,.1) !important;",
 	"}",
 	"",
 	"/* \"Create New Post\" -> Photo: \"Filters\" and \"Adjustments\" + button when you add multiple photos/videos + background for photo + elements for video*/",
@@ -186,6 +187,12 @@
 	".uo5MA, .AvhYw {",
 	"    -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.4) !important;",
 	"    box-shadow: 0 0 5px 1px rgba(255,255,255,.4) !important;",
+	"}",
+	"",
+	"/* Drop shadow for account minipreviews?! + maybe other elements?! */",
+	".GdeD6 {",
+	"    -webkit-box-shadow: 0 2px 16px 0 rgba(255,255,255,.22),0 0 0 1px #717171 !important;",
+	"    box-shadow: 0 2px 16px 0 rgba(255,255,255,.22),0 0 0 1px #717171 !important;",
 	"}",
 	"",
 	"/* White shadow for \"New Posts\" button (very tricky to make it appearing, just refresh page and scroll down fast, if you don't scroll down the main feed might automatically update, preventing \"New Posts\" to show up) */",
@@ -410,7 +417,7 @@
 	"[data-bloks-name][style*=\"background: rgb(255, 255, 255)\"] {",
 	"    background: rgb(0, 0, 0) !important;",
 	"}",
-	"[data-bloks-name][style*=\"background: rgb(239, 239, 239)\"]:active {",
+	"[data-bloks-name][style*=\"background: rgb(239, 239, 239)\"] {",
 	"    background: rgb(16, 16, 16) !important;",
 	"}",
 	"[data-bloks-name][style*=\"background-color: rgb(255, 255, 255)\"] {",
