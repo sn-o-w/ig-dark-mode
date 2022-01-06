@@ -3,7 +3,7 @@
 // @namespace		https://github.com/sn-o-w/ig-dark-mode
 // @description	Dark mode implementation for Instagram.
 // @author			Snow
-// @version			0.3.5
+// @version			0.4
 // @match				*://www.instagram.com/*
 // @updateURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL	https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -47,10 +47,10 @@
 	"    /* Spacerbar */",
 	"    --ce3: 100, 100, 100 !important;",
 	"    --bb2: 21, 21, 21 !important;",
-	"    --a97: 7, 7, 7 !important;",
+	"    --a97: 12, 12, 12 !important;",
 	"    ",
 	"    /* Main Background */",
-	"    --b3f: 7, 7, 7 !important;",
+	"    --b3f: 12, 12, 12 !important;",
 	"    ",
 	"    /* Header Backgrounds */",
 	"    --d87: 0, 0, 0 !important;",
@@ -174,8 +174,14 @@
 	"}",
 	"",
 	"/* Search bar */",
-	".pbgfb, .x3qfX {",
-	"    background: #1e1e1e !important;",
+	".cTBqC, .DljaH {",
+	"    background: #2c2c2c !important;",
+	"}",
+	".TqC_a, .DljaH::placeholder {",
+	"    color: #c8c8c8 !important;",
+	"}",
+	".cTBqC>div:first-child>div>svg {",
+	"    color: #c8c8c8 !important;",
 	"}",
 	"",
 	"/* The white-ish background behind the focused post and after clicking more options on an account (\"Block this user\", \"Restrict...\") */",
