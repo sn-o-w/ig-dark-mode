@@ -1,13 +1,13 @@
 // ==UserScript==
-// @name				Dark Instagram by Snow
-// @namespace		https://github.com/sn-o-w/ig-dark-mode
-// @description	Dark mode implementation for Instagram.
-// @author			Snow
-// @version			0.4.5
-// @match				*://www.instagram.com/*
-// @updateURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
-// @downloadURL	https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
-// @run-at			document-start
+// @name					Dark Instagram by Snow
+// @namespace			https://github.com/sn-o-w/ig-dark-mode
+// @description		Dark mode implementation for Instagram.
+// @author				Snow
+// @version				0.5.5
+// @match					*://www.instagram.com/*
+// @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
+// @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
+// @run-at				document-start
 // ==/UserScript==
 (function() {var css = [
 	"/* Define dark mode to get specific scrollbars */",
@@ -114,6 +114,9 @@
 	"",
 	"/* Inside \"Switch Accounts\", the circle border for accounts' pics is barely visible, let's fix this + all border circles for profile pics */",
 	"/* Added \":not(.edq1N)>:not(._295C2)\" + \":not(.B7GUE)>:not(.RR-M-)\" to not modify circle borders within Stories page; Stories page has a dark background, so no need to edit there! */",
+	"._2dbep {",
+	"    background-color: #080808 !important;",
+	"}",
 	":not(.edq1N)>:not(._295C2)>._2dbep::after, :not(.B7GUE)>:not(.RR-M-)>._2dbep::after {",
 	"    border: 1px solid rgba(255,255,255,.1) !important;",
 	"}",
@@ -413,17 +416,27 @@
 	"}",
 	"",
 	"/* Lighter color for pending loading account's names and avatars for first post & \"Suggestions for You\" on the right, both in main page + highlights if exist on accounts' pages + elements mentioned earlier, in a direct post (all these happen in the first second of Instagram page load) */",
-	".QOqBd, .OzqB_, ._8VIOK, .u9F97, ._-9WeM, ._7JZQt, .VcOAj, .qfAOE, .kAlZ6, .HE3mO, .EIuhb, .RdURl {",
+	"/* QOqBd used for \"Suggestions for you\", main feed, on the right ?! */",
+	"/* OzqB_, _8VIOK, u9F97 + WidCF used in the main feed, for first not loaded yet post */",
+	"/* _7JZQt, _-9WeM used for highlights' avatars + highlights' names, in account page where highlights exist */",
+	"/* LO-7C is used as the border for highlights' circular avatars */",
+	"/* LHkGc + VcOAj, qfAOE, kAlZ6, HE3mO, EIuhb, RdURl + csxf2 ==> used for the first section (not loaded yet), focused post + section next to the focused post + background of the second section */",
+	".QOqBd, .OzqB_, ._8VIOK, .u9F97, ._7JZQt, ._-9WeM, .VcOAj, .qfAOE, .kAlZ6, .HE3mO, .EIuhb, .RdURl {",
 	"    background: #212121 !important;",
 	"}",
-	".csxf2 {",
-	"    background-color: #050505 !important;",
+	".WidCF, .LHkGc {",
+	"    filter: invert(92.5%) !important;",
 	"}",
 	".LO-7C {",
 	"    border: 2px solid #3a3a3a !important;",
 	"}",
-	".WidCF {",
-	"    filter: invert(92.5%) !important;",
+	".csxf2 {",
+	"    background-color: #050505 !important;",
+	"}",
+	"",
+	"/* Circle border for profiles, when you try to see a post while being unlogged and you are prompted to log in, so there are cookies stored of previous logins */",
+	".o06Gi {",
+	"    border: solid 1px #101010 !important;",
 	"}",
 	"",
 	"/* Lock symbol when you log in and you're asked to save your login or not */",
