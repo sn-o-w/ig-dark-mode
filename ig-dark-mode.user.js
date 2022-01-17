@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				0.5.5
+// @version				0.6
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -84,6 +84,26 @@
 	"    color: #fff !important;",
 	"}",
 	"",
+
+
+
+	"/* Elements used in sub-frames, visible outside of Instagram?! // Embeddable posts?! */",
+	".AvatarContainer, .PrimaryCTA, .HoverCard .HoverCardRoot {",
+	"    background-color: #000 !important;",
+	"}",
+	".embedSpriteHeartOpen, .embedSpriteComment, .embedSpriteShare, .embedSpriteSaveOpen, .embedSpriteGlyph {",
+	"    filter: invert(1) !important;",
+	"}",
+
+
+
+	"/* On any private account page there is a subtle shadow for the circular avatar pic */",
+	".M-jxE::after {",
+	"    border: 1px solid rgba(255,255,255,.0975) !important;",
+	"}",
+
+
+
 	"/* Add border shadow for \"Now you can create and share posts directly from your computer\" (it appears first seconds after you log into your account) */",
 	"/* iMofo is also used for other elements such as the rectangle box appearing within any DM for \"Like | Copy | Unsend\" + maps' data menu */",
 	"/* Despite there being a box-shadow for maps' data menu, I've defined extra classes such as nwToI [\"Now you can create and share posts directly from your computer\"] and HZ9O2 [\"Like | Copy | Unsend\" thing] */",
@@ -113,12 +133,12 @@
 	"}",
 	"",
 	"/* Inside \"Switch Accounts\", the circle border for accounts' pics is barely visible, let's fix this + all border circles for profile pics */",
-	"/* Added \":not(.edq1N)>:not(._295C2)\" + \":not(.B7GUE)>:not(.RR-M-)\" to not modify circle borders within Stories page; Stories page has a dark background, so no need to edit there! */",
+	"/* Added \":not(.edq1N)>div>:not(._OVxx)\" to not modify circle borders within Stories page; Stories page has a dark background, so no need to edit there! */",
 	"._2dbep {",
 	"    background-color: #080808 !important;",
 	"}",
-	":not(.edq1N)>:not(._295C2)>._2dbep::after, :not(.B7GUE)>:not(.RR-M-)>._2dbep::after {",
-	"    border: 1px solid rgba(255,255,255,.1) !important;",
+	":not(.edq1N)>div>:not(._OVxx)._2dbep::after {",
+	"    border: 1px solid rgba(255,255,255,.0975) !important;",
 	"}",
 	"",
 	"/* \"Create New Post\" -> Photo: \"Filters\" and \"Adjustments\" + button when you add multiple photos/videos + background for photo + elements for video*/",
@@ -444,7 +464,7 @@
 	"    filter: invert(1) !important;",
 	"}",
 	"",
-	"/* Logo visible in the login page */",
+	"/* Logo visible on the login page */",
 	".coreSpriteLoggedOutWordmark {",
 	"    filter: invert(1) !important;",
 	"}",
@@ -462,7 +482,7 @@
 	"    color: #dcdcdc !important;",
 	"}",
 	"",
-	"/* Ligher \"Meta\" text next to \"Meta\" logo, for instance here: https://instagram.com/accounts/edit/ */",
+	"/* Lighter \"Meta\" text next to \"Meta\" logo, for instance here: https://instagram.com/accounts/edit/ */",
 	"g[clip-path=\"url(#a)\"] > path[fill=\"#1C2B33\"] {",
 	"    filter: invert(1) !important;",
 	"}",
