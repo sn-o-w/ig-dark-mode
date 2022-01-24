@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				0.8.6
+// @version				0.8.7
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -243,27 +243,27 @@
 	"",
 	"/* The background behind the focused post and after clicking more options on an account (\"Block this user\", \"Restrict...\") */",
 	".RnEpo {",
-	"   background-color: rgba(0,0,0,.5) !important;",
+	"   background-color: rgba(255,255,255,.35) !important;",
 	"}",
 	"",
 	"/* Elements appearing after clicking more options on an account */",
-	".aOOlW, ._1XyCr {",
-	"    background-color: #1e1e1e !important;",
+	".aOOlW, ._1XyCr:not(.eTsBx) {",
+	"    background-color: #101010 !important;",
 	"}",
 	".aOOlW:not(:first-child) {",
 	"    border-top: 1px solid #525252 !important;",
 	"}",
 	".aOOlW:not(.SRPMb):active {",
-	"    background-color: #141414 !important;",
+	"    background-color: #060606 !important;",
 	"}",
 	".b5k4S:active {",
-	"    background-color: #2e2e2e !important;",
+	"    background-color: #202020 !important;",
 	"}",
 	".eiUFA {",
 	"    border-bottom: 1px solid #525252 !important;",
 	"}",
 	".J09pf:not(:first-child):before, .J09pf:not(:last-child):after, .b5k4S:not(:first-child):before {",
-	"    background-color: #3e3e3e !important;",
+	"    background-color: #303030 !important;",
 	"}",
 	"",
 	"/* White shadow for the account dropdown menu + Activity menu at the top right + search results rectangular thing */",
@@ -343,7 +343,7 @@
 	"",
 	"/* Add specific background for the list of following and/or followed people */",
 	"._6xe7A {",
-	"    background: #1e1e1e !important;",
+	"    background: #101010 !important;",
 	"}",
 	"",
 	"/* Selected option for instance for reporting an account + these selections: https://instagram.com/push/web/settings/ */",
