@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				0.8.5
+// @version				0.8.6
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -339,6 +339,11 @@
 	"}",
 	".TGYkm {",
 	"    border-bottom: 1px solid #525252 !important;",
+	"}",
+	"",
+	"/* Add specific background for the list of following and/or followed people */",
+	"._6xe7A {",
+	"    background: #1e1e1e !important;",
 	"}",
 	"",
 	"/* Selected option for instance for reporting an account + these selections: https://instagram.com/push/web/settings/ */",
