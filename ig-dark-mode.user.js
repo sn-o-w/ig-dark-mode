@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				0.8.8
+// @version				0.8.9
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -243,7 +243,7 @@
 	"",
 	"/* The background behind the focused post and after clicking more options on an account (\"Block this user\", \"Restrict...\") */",
 	".RnEpo {",
-	"   background-color: rgba(0,0,30,.65) !important;",
+	"   background-color: rgba(10,20,30,.65) !important;",
 	"}",
 	"",
 	"/* Elements appearing after clicking more options on an account */",
@@ -252,7 +252,7 @@
 //	"    box-shadow: 0 0 10px 1px rgba(255,255,255,.4) !important;",
 //	"    border-radius: 16px !important;",
 //	"}",
-	".aOOlW, .fPMEg > ._1XyCr {",
+	".aOOlW, :not(.bW6vo) > ._1XyCr {",
 	"    background-color: #141414 !important;",
 	"}",
 	".aOOlW:not(:first-child) {",
