@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				0.8.7
+// @version				0.8.8
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -243,27 +243,32 @@
 	"",
 	"/* The background behind the focused post and after clicking more options on an account (\"Block this user\", \"Restrict...\") */",
 	".RnEpo {",
-	"   background-color: rgba(255,255,255,.35) !important;",
+	"   background-color: rgba(0,0,30,.65) !important;",
 	"}",
 	"",
 	"/* Elements appearing after clicking more options on an account */",
-	".aOOlW, ._1XyCr:not(.eTsBx) {",
-	"    background-color: #101010 !important;",
+//	"/* Testing with a box-shadow, not working well, and therefore disabled atm */",
+//	".fPMEg {",
+//	"    box-shadow: 0 0 10px 1px rgba(255,255,255,.4) !important;",
+//	"    border-radius: 16px !important;",
+//	"}",
+	".aOOlW, .fPMEg > ._1XyCr {",
+	"    background-color: #141414 !important;",
 	"}",
 	".aOOlW:not(:first-child) {",
-	"    border-top: 1px solid #525252 !important;",
+	"    border-top: 1px solid #222222 !important;",
 	"}",
 	".aOOlW:not(.SRPMb):active {",
-	"    background-color: #060606 !important;",
+	"    background-color: #0e0e0e !important;",
 	"}",
 	".b5k4S:active {",
-	"    background-color: #202020 !important;",
+	"    background-color: #1c1c1c !important;",
 	"}",
 	".eiUFA {",
-	"    border-bottom: 1px solid #525252 !important;",
+	"    border-bottom: 1px solid #3c3c3c !important;",
 	"}",
 	".J09pf:not(:first-child):before, .J09pf:not(:last-child):after, .b5k4S:not(:first-child):before {",
-	"    background-color: #303030 !important;",
+	"    background-color: #222222 !important;",
 	"}",
 	"",
 	"/* White shadow for the account dropdown menu + Activity menu at the top right + search results rectangular thing */",
@@ -343,7 +348,7 @@
 	"",
 	"/* Add specific background for the list of following and/or followed people */",
 	"._6xe7A {",
-	"    background: #101010 !important;",
+	"    background: #141414 !important;",
 	"}",
 	"",
 	"/* Selected option for instance for reporting an account + these selections: https://instagram.com/push/web/settings/ */",
