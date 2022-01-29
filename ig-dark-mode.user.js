@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				0.9.2
+// @version				0.9.3
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -300,6 +300,11 @@
 	"    box-shadow: 0 2px 16px 0 rgba(255,255,255,.22),0 0 0 1px #717171 !important;",
 	"}",
 	"",
+	"/* Background for account mini previews */",
+	".GdeD6 .DPiy6 {",
+	"    background: #121212 !important;",
+	"}",
+	"",
 	"/* White shadow for \"New Posts\" button (very tricky to make it appear, just refresh the page and scroll down fast, if you don't scroll down the main feed might automatically update, preventing \"New Posts\" from showing up) */",
 	".tCibT {",
 	"    background: #121212 !important;",
@@ -360,6 +365,11 @@
 	"",
 	"/* Add specific background for the list of following and/or followed people */",
 	"._6xe7A {",
+	"    background: #121212 !important;",
+	"}",
+	"",
+	"/* In Following section it might appear \"Suggestions For You\" */",
+	".isgrP .DPiy6 {",
 	"    background: #121212 !important;",
 	"}",
 	"",
