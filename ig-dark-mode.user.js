@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.0.0
+// @version				1.0.1
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -47,7 +47,7 @@
 	"    /* Spacerbar */",
 	"    --ce3: 94, 94, 94 !important;",
 	"    --bb2: 21, 21, 21 !important;",
-	"    --a97: 5, 5, 55 !important;",
+	"    --a97: 5, 5, 5 !important;",
 	"    ",
 	"    /* Main Background */",
 	"    --b3f: 5, 5, 5 !important;",
@@ -698,7 +698,7 @@
 	"    background-color: rgb(5, 5, 5) !important;",
 	"}",
 	"[data-bloks-name][style*=\"background: rgb(250, 250, 250)\"] {",
-	"    background: rgb(20, 20, 20) !important;",
+	"    background: rgb(17, 17, 17) !important;",
 	"}",
 	"[data-bloks-name][style*=\"background: rgb(219, 219, 219)\"] {",
 	"    background: rgb(94, 94, 94) !important;",
