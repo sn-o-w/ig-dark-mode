@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.0.1
+// @version				1.0.2
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -102,7 +102,7 @@
 	"}",
 	"",
 	"/* Notification buble, for instance [\"Like | Copy | Unsend\" thing] and other similar shape things */",
-	".HZ9O2, .LpqwJ  {",
+	".HZ9O2, .LpqwJ {",
 	"    background-color: #323232 !important;",
 	"}",
 	"",
@@ -123,7 +123,7 @@
 	"}",
 	"",
 	"/* General border used around circular profile pics within Instagram */",
-	"/* Added \":not(.B7GUE, .edq1N)\" to not modify circle borders within Stories page; Stories page has a dark background, so no need to edit there! */",
+	"/* Added \":not(.B7GUE, .edq1N)\" to not modify circle borders within Stories page; Stories page has a dark background, so no need to edit in there! */",
 	"._2dbep {",
 	"    background-color: #0c0c0c !important;",
 	"}",
@@ -359,7 +359,6 @@
 	"}",
 	"",
 	"/* Logo visible at the top left, except Stories page */",
-	"/* Added :not(a) to not invert Instagram logo appearing while viewing Stories */",
 	"/* Added orange-ish color for ::selection to imitate the blue selection rectangle + light gray for ::selection:window-inactive for dark grayish of selection while inactive window (notice we do this to display the inverted color!) */",
 	".s4Iyt[src*=\"735145cfe0a4.png\"] {",
 	"    filter: invert(1) !important;",
@@ -476,7 +475,7 @@
 	"    color: #717171 !important;",
 	"}",
 	"",
-	"/* Silhouette + checkmark for following channel button (Next to \"Message\" button on an account page you're following)*/",
+	"/* Silhouette + checkmark for following channel button (Next to \"Message\" button on an account page you're following) */",
 	".glyphsSpriteFriend_Follow {",
 	"    filter: invert(1) !important;",
 	"}",
@@ -486,7 +485,7 @@
 	"    filter: invert(1) !important;",
 	"}",
 	"",
-	"/* Selector (hover & focus) for people within Inbox */",
+	"/* Selector (hover & focus) for people within Inbox section */",
 	".-qQT3.rOtsg:hover {",
 	"    background: #111111 !important;",
 	"}",
@@ -494,7 +493,7 @@
 	"    background: #2b2b2b !important;",
 	"}",
 	"",
-	"/* Ballons used within chats */",
+	"/* Ballons used within DMs */",
 	".CMoMH {",
 	"    border: 1px solid #282828 !important;",
 	"}",
@@ -505,8 +504,8 @@
 	"    background-color: #282828 !important;",
 	"}",
 	"",
-	"/* 'Silhouette in a speech balloon, inside a circle':  */",
-	"/* 1) for \"No Photos\" in the \"Tagged\" section of a public account;  */",
+	"/* 'Silhouette in a speech balloon, inside a circle': */",
+	"/* 1) for \"No Photos\" in the \"Tagged\" section of a public account; */",
 	"/* 2) for \"Photos of You\" in \"Tagged\" page of your account (this seems to not appear always?! I have 2 accs, I only see this in 1 acc) */",
 	"/* coreSpriteProfileCamera is used for mobile user agents such as Android */",
 	".coreSpriteTaggedNull, .coreSpriteProfileCamera {",
@@ -556,7 +555,7 @@
 	"}",
 	"",
 	"/* Change the color for highlighted comments */",
-	"/* For some reason, this doesn't work :/ */",
+	"/* For some reason, this doesn't work :/ I simply wonder why... */",
 	"@-webkit-keyframes CommentPermalinkAnimHighlightFade {",
 		"0% { background-color: #090300 !important; }",
 		"to { background-color: transparent !important; }",
@@ -620,7 +619,7 @@
 	"}",
 	"",
 	"/* Lighter color for pending loading account's names and avatars for first post & \"Suggestions for You\" on the right, both in main page + highlights if exist on accounts' pages + elements mentioned earlier, in a direct post (all these happen in the first second of Instagram page load) */",
-	"/* QOqBd used for \"Suggestions for you\", main feed, on the right ?! */",
+	"/* QOqBd used for \"Suggestions for you\", main feed, on the right */",
 	"/* OzqB_, _8VIOK, u9F97 + pOb2E + WidCF used in the main feed, for first not loaded yet post */",
 	"/* _7JZQt, _-9WeM used for highlights' avatars + highlights' names, in account page where highlights exist */",
 	"/* LO-7C is used as the border for highlights' circular avatars */",
