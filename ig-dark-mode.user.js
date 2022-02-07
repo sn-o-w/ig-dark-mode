@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.0.2
+// @version				1.0.3
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -115,6 +115,16 @@
 	"/* Circle border for the location, for instance here: https://instagram.com/explore/locations/100171148223508/paris-france/ */",
 	".VU4al::after {",
 	"    border: 1px solid rgba(255,255,255,.0975) !important;",
+	"}",
+	"",
+	"/* Following + Activity (Suggestions For You) */",
+	"._01UL2 .DPiy6, .fPMEg .DPiy6, ._6xe7A {",
+	"    background-color: #222222 !important;",
+	"}",
+	"",
+	"/* Cookie notice */",
+	".FrS-d .aOOlW:active {",
+	"    background-color: #484848 !important;",
 	"}",
 	"",
 	"/* Followed hashtags (just click on the \"Following\", then \"Hashtags\") */",
@@ -305,7 +315,7 @@
 	".mt3GC:only-child .aOOlW:first-child {",
 	"    border-top: none !important;",
 	"}",
-	".aOOlW:not(.SRPMb):active {",
+	".mt3GC > .aOOlW:active {",
 	"    background-color: #101010 !important;",
 	"}",
 	".b5k4S:active {",
