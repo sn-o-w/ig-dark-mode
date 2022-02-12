@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.0.3
+// @version				1.0.4
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -170,6 +170,14 @@
 	"    background: #484848 !important;",
 	"}",
 	"",
+	"/* Options - Android user agent */",
+	".abaSk, ._7XkEo .DPiy6 {",
+	"    background-color: #050505 !important;",
+	"}",
+	"._7XkEo {",
+	"    background: #111111 !important;",
+	"}",
+	"",
 	"/* https://instagram.com/accounts/edit/ */",
 	".BvMHM, .wW1cu > .DPiy6, ._6zPK7 {",
 	"    background-color: #050505 !important;",
@@ -179,7 +187,7 @@
 	"    background-color: #161616 !important;",
 	"}",
 	"/* https://instagram.com/direct/inbox/ */",
-	".S-mcP, .N9abW, .oYYFH .DPiy6 {",
+	".oNO81 > .S-mcP, .oNO81 .N9abW, .oYYFH .DPiy6 {",
 	"    background-color: #050505 !important;",
 	"}",
 	"/* \"Create New Post\" -> Photo: \"Filters\" and \"Adjustments\" + button when you add multiple photos/videos + background for photo + elements for video */",
@@ -319,7 +327,7 @@
 	"    background-color: #101010 !important;",
 	"}",
 	".b5k4S:active {",
-	"    background-color: #222222 !important;",
+	"    background-color: #484848 !important;",
 	"}",
 	".J09pf:not(:first-child):before, .J09pf:not(:last-child):after, .b5k4S:not(:first-child):before {",
 	"    background-color: #3a3a3a !important;",
@@ -351,8 +359,8 @@
 	"/* White shadow for \"New Posts\" button (very tricky to make it appear, just refresh the page and scroll down fast, if you don't scroll down the main feed might automatically update, preventing \"New Posts\" from showing up) */",
 	".tCibT {",
 	"    background: #323232 !important;",
-	"    -webkit-box-shadow: 0 0px 30px rgba(0,0,0,.6) !important;",
-	"    box-shadow: 0 0px 30px rgba(0,0,0,.6) !important;",
+	"    -webkit-box-shadow: 0 0px 30px rgba(0,0,0,.8) !important;",
+	"    box-shadow: 0 0px 30px rgba(0,0,0,.8) !important;",
 	"}",
 	"",
 	"/* Circle border for people liking a post, there are small previews of profile pics, if mutual people you follow liked that post */",
@@ -411,6 +419,10 @@
 	"}",
 	"button.ZQScA > div.QBdPU > svg._8-yf5[color=\"#0095f6\"] {",
 	"    color: #fff !important;",
+	"}",
+	"/* Android user agent */",
+	".pbNvD ._9ezyW {",
+	"    background-color: #222222 !important;",
 	"}",
 	"",
 	"/* Selected option for instance for reporting an account + these selections: https://instagram.com/push/web/settings/ */",
@@ -608,7 +620,7 @@
 	"    background: #2b2b2b !important;",
 	"}",
 	"._2uvWF .LpqwJ {",
-	"    background: #161616 !important;",
+	"    background: #222222 !important;",
 	"}",
 	"._2uvWF .W4P49 {",
 	"    background: #3a3a3a !important;",
@@ -647,7 +659,7 @@
 	"    border: 2px solid #404040 !important;",
 	"}",
 	".csxf2 {",
-	"    background-color: #222222 !important;",
+	"    background-color: #1e1e1e !important;",
 	"}",
 	"",
 	"/* Circle border for profiles, when you try to see a post while being unlogged and you are prompted to log in, so there are cookies stored of previous logins */",
