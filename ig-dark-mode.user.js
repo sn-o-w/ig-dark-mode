@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.0.5
+// @version				1.0.6
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -311,6 +311,10 @@
 	".cTBqC > div:first-child > div > svg {",
 	"    color: #fafafa !important;",
 	"}",
+	"/* Selection when you type something in search bar and scroll over results and outside them */",
+	"._01UL2 > div > .JvDyy {",
+	"    background: #313131 !important;",
+	"}",
 	"",
 	"/* Instagram filter/effect page */",
 	".OOEGs {",
@@ -345,6 +349,11 @@
 	"    background: #272727 !important;",
 	"}",
 	"",
+	"/* Background when you no longer have follow requests in Activity feed */",
+	"._01UL2 .tHaIX {",
+	"    background: #313131 !important;",
+	"}",
+	"",
 	"/* White shadow for the account dropdown menu + Activity menu at the top right + search results rectangular thing */",
 	".AvhYw {",
 	"    background-color: #272727 !important;",
@@ -364,7 +373,7 @@
 	"",
 	"/* White shadow for \"New Posts\" button (very tricky to make it appear, just refresh the page and scroll down fast, if you don't scroll down the main feed might automatically update, preventing \"New Posts\" from showing up) */",
 	".tCibT {",
-	"    background: #323232 !important;",
+	"    background: #383838 !important;",
 	"    -webkit-box-shadow: 0 0px 30px rgba(0,0,0,.8) !important;",
 	"    box-shadow: 0 0px 30px rgba(0,0,0,.8) !important;",
 	"}",
