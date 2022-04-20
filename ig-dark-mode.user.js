@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.1.0
+// @version				1.1.1
 // @match					*://www.instagram.com/*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
 // @downloadURL		https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -27,6 +27,7 @@
 	"    ",
 	"    /* Text and Usernames */",
 	"    --i1d: 255, 255, 255 !important;",
+	"    --ig-primary-text: 255, 255, 255 !important;",
 	"    ",
 	"    /* Username and Like count */",
 	"    --f75: 255, 255, 255 !important;",
@@ -42,6 +43,7 @@
 	"    /* Borders */",
 	"    --b38: 94, 94, 94 !important;",
 	"    --b6a: 94, 94, 94 !important;",
+	"    --ig-elevated-separator: 94, 94, 94 !important;",
 	"    --ca6: 94, 94, 94 !important;",
 	"    ",
 	"    /* Spacerbar */",
@@ -54,6 +56,7 @@
 	"    ",
 	"    /* Header Backgrounds */",
 	"    --d87: 27, 27, 27 !important;",
+	"    --ig-primary-background: 27, 27, 27 !important;",
 	"    --f23: 39, 39, 39 !important;",
 	"}",
 	"",
@@ -188,10 +191,31 @@
 	".fuQUr:hover {",
 	"    background: #141414 !important;",
 	"}",
+	
+	
+	
+	
+	
 	"/* https://instagram.com/explore/people/ */",
-	".dL3lC > .DPiy6 {",
-	"    background-color: #1b1b1b !important;",
+	"._9_pk > i {",
+	"    filter: invert(1) !important;",
 	"}",
+	//"._a3gq ._9z_7 {",
+	//"    background-color: #1B1B1B !important;",
+	//"    filter: invert(0.895) !important;",
+	//"}",
+	"._9zn7[color=\"#262626\"][fill=\"#262626\"] {",
+	"    color: #d9d9d9 !important;",
+	"    fill: #d9d9d9 !important;",
+	"}",
+	//"._a3gq ._9zi0, ._a3gq ._9zho {",
+	//"    background-color: #0a0a0a !important;",
+	//"}",
+	
+	
+	
+	
+	
 	"/* https://instagram.com/direct/inbox/ */",
 	".S-mcP, .oNO81 .N9abW, .oYYFH .DPiy6 {",
 	"    background-color: #0a0a0a !important;",
@@ -282,6 +306,7 @@
 	"}",
 	"",
 	"/* Elements used here: https://instagram.com/tv/upload/ */",
+	"/* They killed this page? WTF?! 🤨 TODO: Check for a while if this page will come back, delete these rules if not */",
 	".SJ1H9, .uAQYz {",
 	"    background-color: #1b1b1b !important;",
 	"}",
@@ -396,21 +421,21 @@
 	"",
 	"/* Logo visible at the top left, except Stories page */",
 	"/* Added orange-ish color for ::selection to imitate the blue selection rectangle + light gray for ::selection:window-inactive for dark grayish of selection while inactive window (notice we do this to display the inverted color!) */",
-	".s4Iyt[src*=\"735145cfe0a4.png\"] {",
+	":not([style]):not(.jUFd-)>*>.s4Iyt {",
 	"    filter: invert(1) !important;",
 	"}",
-	".s4Iyt[src*=\"735145cfe0a4.png\"]::selection {",
+	":not([style]):not(.jUFd-)>*>.s4Iyt::selection {",
 	"    background-color: #ffa232 !important;",
 	"}",
-	".s4Iyt[src*=\"735145cfe0a4.png\"]::selection:window-inactive {",
+	":not([style]):not(.jUFd-)>*>.s4Iyt::selection:window-inactive {",
 	"    background-color: #9d9d9d !important;",
 	"}",
 	"/* Specific rectangle blue selection within Firefox for Instagram logo */",
-	".s4Iyt[src*=\"735145cfe0a4.png\"]::-moz-selection {",
+	":not([style]):not(.jUFd-)>*>.s4Iyt::-moz-selection {",
 	"    background-color: #ff7864 !important;",
 	"}",
-	"/* The above doesn't/can't work for Firefox, lol. Within Firefox you cannot change the color of any selection when the window is inactive. :( */",
-	".s4Iyt[src*=\"735145cfe0a4.png\"]::-moz-selection:-moz-window-inactive {",
+	"/* The below doesn't/can't work for Firefox, lol. Within Firefox you cannot change the color of any selection when the window is inactive. :( */",
+	":not([style]):not(.jUFd-)>*>.s4Iyt::-moz-selection:-moz-window-inactive {",
 	"    background-color: #a5a5a5 !important;",
 	"}",
 	"",
@@ -504,7 +529,7 @@
 	"    border: 1px solid #fff !important;",
 	"}",
 	"",
-	"/* Views box, for example for a video post */",
+	"/* Views rectangular thing, for example for a video post */",
 	"._690y5 {",
 	"    -webkit-box-shadow: 0 0 5px 3px rgba(0,0,0,.9) !important;",
 	"    box-shadow: 0 0 5px 3px rgba(0,0,0,.9) !important;",
@@ -749,8 +774,8 @@
 	"}",
 	"",
 	"/* Lighter \"Meta\" text next to \"Meta\" logo, for instance here: https://instagram.com/accounts/edit/ */",
-	"svg[aria-label*=\"Facebook\"] path[fill=\"#1C2B33\"] {",
-	"    fill: #e3d4cc !important;",
+	"svg[aria-label*=\"Facebook\"] path[fill=\"#262626\"] {",
+	"    fill: #d9d9d9 !important;",
 	"}",
 	"",
 	"/* The vertical line above \"Get the app\" on any post, while using mobile user agent such as Android */",
