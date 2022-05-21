@@ -10,4 +10,4 @@ Ran initially as an experiment to learn CSS, I do keep learning it.
  - Update/improve descriptions for all vague elements
 
 ## A little preview
-![146561008-2fa3da47-61a6-4788-a2ae-37399cb474a9](https://user-images.githubusercontent.com/2406819/148709658-dfb7fa4d-9834-4197-ad80-174e7461fe90.png)
+![169342809-7cd6f193-6f28-49fb-aee2-0e03f1a5a6bf](https://user-images.githubusercontent.com/2406819/169662731-aa31d24e-1fb2-4977-8fa0-67a8f5c780b8.png)
