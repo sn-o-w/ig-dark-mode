@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.5.1
+// @version				1.5.2
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -50,7 +50,7 @@
 	"    --ig-elevated-separator: 94,94,94 !important;", //modified
 	"    --ig-focus-stroke: 85,85,85 !important;",
 	"    --ig-highlight-background: 83,83,83 !important;", //modified
-	"    --ig-link: 224,241,255 !important;", //modified
+	"    --ig-link: 0,155,255 !important;", //modified
 	"    --ig-primary-background: 28,28,28 !important;",
 	"    --ig-primary-text: 250,250,250 !important;",
 	"    --ig-secondary-background: 10,10,10 !important;", //modified
@@ -106,9 +106,20 @@
 	"}",
 	"/* 3 dots for more options, icons on the nav bar and posts, and other elements */",
 	"/* Added [color=\"#262626\"] to not change red color of like activated button [for liked posts & liked replies] and blue color of checkmark (inside \"Switch Accounts\" thing) + perhaps other things I'm not aware of?! */",
-	"._8-yf5[color=\"#262626\"][fill=\"#262626\"], ._ab6-[color=\"#262626\"][fill=\"#262626\"] {",
+	"/* Added :not(._ab9y._aba8) to avoid changing the colors inside \"Create new post\" small bottom elements */",
+	"._8-yf5[color=\"#262626\"][fill=\"#262626\"], *:not(._ab9y._aba8)>._ab6-[color=\"#262626\"][fill=\"#262626\"] {",
 	"    color: #e8e8e8 !important;",
 	"    fill: #e8e8e8 !important;",
+	"}",
+	"/* \"Create new post\" enhacements for filters slider(s) */",
+	"._a3gq ._ac2y:not(._ac2-) {",
+	"    filter: invert(1) brightness(2.6) !important;",
+	"}",
+	"._a3gq ._ac2y:not(._ac2-)::-webkit-slider-thumb {",
+	"    background: #000 !important;",
+	"}",
+	"._a3gq ._ac2y:not(._ac2-)::-moz-range-thumb {",
+	"    background: #000 !important;",
 	"}",
 	"/* Pending elements, not loaded yet, for Suggestions for You (Main Feed) + Highlights on any account page */",
 	"._aak3 ._ab8o, ._ab05 ._aa-w, ._ab05 ._acor {",
@@ -122,11 +133,11 @@
 	"    background-color: #2e2e2e !important;",
 	"}",
 	"/* Fixes for posts in main feed */",
-	"._aatc ._aasu {",
+	"._a3gq ._ab0w ._aaz1 {",
 	"    border-top-right-radius: 0 !important;",
 	"    border-top-left-radius: 0 !important;",
 	"}",
-	"._aatc ._aasj {",
+	"._a3gq ._ab0w ._aepp {",
 	"    border-bottom-right-radius: 0 !important;",
 	"    border-bottom-left-radius: 0 !important;",
 	"}",
@@ -195,8 +206,15 @@
 	"._aabo ._aabp {",
 	"    color: #fafafa !important;",
 	"}",
+	
+	
+	"/* Some profile elements such as Posts, Videos, Tagged are blue colored sometimes, fix this */",
+	"._aa-z:not(._aa--)>*>._ac-g {",
+	"    color: rgb(var(--ig-secondary-text)) !important;",
+	"}",
+	
+	
 	"/* The rectangle containing IG account(s), for people selected for sharing a post with AND/OR to start a new message with (similar to the dark theme of Instagram mobile app)*/",
-	"/* For account name, I've added extra things (._6YLdr > button) because otherwise, they might interfere with filters applied to a post + Accounts Center in https://instagram.com/accounts/edit/ */",
 	"._aa2s ._aaid::placeholder {",
 	"    color: #9a9a9a !important;",
 	"}",
@@ -213,7 +231,7 @@
 	"    color: #fff !important;",
 	"}",
 	"/* Make photo tags more transparent alike Instagram app */",
-	"._a3gq ._aa1q {",
+	"._a3gq ._a9-5, ._a3gq ._aa1q {",
 	"   background-color: rgba(0, 0, 0, .5) !important;",
 	"}",
 	"._a3gq ._aa21 {",
@@ -297,7 +315,7 @@
 	"    color: #e3e1de !important;",
 	"}",
 	"select {",
-	"    background-color: #0a0a0a !important;",
+	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	"/* Balloons used within DMs */",
 	"._a3gq ._ac1q {",
@@ -321,7 +339,8 @@
 	"/* \"Plus and silhouette\" symbol after you no longer have any follow requests */",
 	"/* Back button, for example, when you report an account */",
 	"/* Lock symbol for private accounts */",
-	"._9-z-, .glyphsSpriteCamera__outline__24__grey_9, ._9zlg, ._9zlh, .coreSpriteKeyhole, ._9zkj, ._9_1o, ._9-_z, ._9--3 {",
+	"/* Lock symbol, appears especially when you are not logged in and try to see a restricted profile */",
+	"._9-z-, .glyphsSpriteCamera__outline__24__grey_9, ._9zlg, ._9zlh, .coreSpriteKeyhole, ._9zkj, ._9_1o, ._9-_z, ._9--3, ._9-_- {",
 	"    filter: invert(1) !important;",
 	"}",
 	"/* Long lines in between accounts + color text for accounts, used here: https://instagram.com/accounts/login/ */",
