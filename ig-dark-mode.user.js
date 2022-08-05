@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.5.2
+// @version				1.5.3
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -24,7 +24,7 @@
 	"    --i1d: 250,250,250 !important;",
 	"    --edc: 115,115,115 !important;",
 	"    --f75: 250,250,250 !important;",
-	"    --fe0: 224,241,255 !important;",
+	"    --fe0: 86,183,249 !important;", //modified
 	"    --d87: 28,28,28 !important;", //modified
 	"    --b3f: 10,10,10 !important;", //modified
 	"    --bb2: 78,78,78 !important;", //modified
@@ -50,7 +50,7 @@
 	"    --ig-elevated-separator: 94,94,94 !important;", //modified
 	"    --ig-focus-stroke: 85,85,85 !important;",
 	"    --ig-highlight-background: 83,83,83 !important;", //modified
-	"    --ig-link: 0,155,255 !important;", //modified
+	"    --ig-link: 86,183,249 !important;", //modified
 	"    --ig-primary-background: 28,28,28 !important;",
 	"    --ig-primary-text: 250,250,250 !important;",
 	"    --ig-secondary-background: 10,10,10 !important;", //modified
@@ -87,14 +87,6 @@
 	"/* Meta logo visible at Settings page */",
 	"g[clip-path=\"url(#a)\"]>path[fill=\"#262626\"] {",
 	"     fill: #e8e8e8 !important;",
-	"}",
-	"/* Underline for links that are hovered on should not be pure blue, it looks ugly */",
-	"a:hover {",
-	"    text-decoration-color: #83c7fb !important;",
-	"}",
-	"/* Blue color for <a> elements */",
-	"._aacl._aacu._aacx > ._a6hd._a6hd, ._a3gq ._aacz, .tx0Md {",
-	"    color: #009bff !important;",
 	"}",
 	"/* Stories rectangle (force it for Android user agent) */",
 	"._a3gq ._aac4 {",
@@ -183,6 +175,10 @@
 	"._aa_j ._aa90 > svg > circle:not([class]) {",
 	"    fill: rgb(var(--ig-secondary-background)) !important;",
 	"}",
+	"/* Grayish color for live viewer counter displayed on livestreams */",
+	"._a3gq ._aaeh {",
+	"    background: rgba(255,255,255,.44) !important;",
+	"}",
 	"/* Back/forward buttons */",
 	"._a3gq ._aahn, ._a3gq ._aaho {",
 	"    filter: invert(1) !important;",
@@ -206,14 +202,17 @@
 	"._aabo ._aabp {",
 	"    color: #fafafa !important;",
 	"}",
-	
-	
 	"/* Some profile elements such as Posts, Videos, Tagged are blue colored sometimes, fix this */",
 	"._aa-z:not(._aa--)>*>._ac-g {",
 	"    color: rgb(var(--ig-secondary-text)) !important;",
 	"}",
-	
-	
+	"/* Selector used for posts/reels/videos should be more contrasting, to better adapt for dark theme */",
+	"._a3gq ._ac2d[style*=\"background: rgba(0, 0, 0, 0.3)\"] {",
+	"    background: rgba(0, 0, 0, 0.6) !important;",
+	"}",
+	"._a3gq ._ac2d[style*=\"background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 22.27%);\"] {",
+	"    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 44.54%) !important;",
+	"}",
 	"/* The rectangle containing IG account(s), for people selected for sharing a post with AND/OR to start a new message with (similar to the dark theme of Instagram mobile app)*/",
 	"._aa2s ._aaid::placeholder {",
 	"    color: #9a9a9a !important;",
@@ -268,11 +267,11 @@
 	"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
 	"}",
 	"/* New profile buttons, inspired from mobile app */",
-	"._a3gq *:not(._aa_m)>*>*>*>._acap:not(._acas):not(._acav) {",
+	"._a3gq *:not(._aa_m)>*>*>*>._acap:not(._acas):not(._acav), ._4pI4F._8A5w5 {",
 	"    background-color: #4a4a4a !important;",
 	"    border: 1px solid transparent !important;",
 	"}",
-	"._a3gq ._acap:not(._acas) {",
+	"._a3gq ._acap:not(._acas), .L3NKy._8A5w5:not(._4pI4F) {",
 	"    background-color: #383838 !important;",
 	"    border: 1px solid transparent !important;",
 	"}",
@@ -394,7 +393,7 @@
 	"[data-bloks-name=\"ig.components.screens.Navbar\"] > [style*=\"background-color: rgb(255, 255, 255)\"] {",
 	"    background-color: rgb(var(--ig-primary-background)) !important;",
 	"    border-bottom: 1px solid rgb(var(--ig-elevated-separator)) !important;",
-	"}",	
+	"}",
 	"[data-bloks-name][style*=\"color: rgb(38, 38, 38)\"], [data-bloks-name] div[style*=\"justify-content: center; margin: 0px 40px;\"], [data-bloks-name] span[style*=\"font-size:\"][style*=\"line-height:\"]:not([style*=\"color:\"]) {",
 	"    color: rgb(255, 255, 255) !important;",
 	"}",
