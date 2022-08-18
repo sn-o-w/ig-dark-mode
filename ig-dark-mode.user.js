@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.5.5
+// @version				1.5.6
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -17,7 +17,7 @@
 	"}",
 	"/* Black background for <body>, useful in the first milisecs when the page is loaded */",
 	"body {",
-	"    background-color: #0a0a0a !important;",
+	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	"/* Elements based off of https://instagram.com/?theme=dark */",
 	"html, body, div, nav, article, h1, p {",
@@ -37,10 +37,10 @@
 	"    --e62: 0,149,246 !important;",
 	"    --b2f: 55,166,0 !important;",
 	"    --c8c: 85,85,85 !important;",
-	"    --ce3: 78,78,78 !important;", //modified
+	"    --ce3: 58,58,58 !important;", //modified
 	"    --jd9: 255,255,255 !important;",
 	"    --j64: 219,219,219 !important;",
-	"    --a97: 78,78,78 !important;", //modified
+	"    --a97: 58,58,58 !important;", //modified
 	"    --d20: 250,250,250 !important;",
 	"",
 	"    --challenge-link: 219,219,219 !important;",
@@ -56,11 +56,11 @@
 	"    --ig-secondary-background: 10,10,10 !important;", //modified
 	"    --ig-secondary-button: 250,250,250 !important;",
 	"    --ig-secondary-text: 160,160,160 !important;", //modified
-	"    --ig-separator: 78,78,78 !important;", //modified
+	"    --ig-separator: 58,58,58 !important;", //modified
 	"    --ig-stroke: 94,94,94 !important;", //modified
 	"    --ig-temporary-highlight: 0,149,246 !important;",
 	"    --ig-tertiary-text: 130,130,130 !important;", //modified
-	"    --post-separator: 78,78,78 !important;", //modified
+	"    --post-separator: 58,58,58 !important;", //modified
 	"    --tos-box-shadow: 255,255,255 !important;",
 	"    --web-always-black: 0,0,0 !important;",
 	"}",
@@ -92,9 +92,9 @@
 	"._aac4 {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
 	"}",
-	"/* Fixes for post in focus when extremely zoomed in */",
-	"._aasi, ._aasw {",
-	"    background-color: rgb(var(--ig-primary-background)) !important;",
+	"/* Fix for focused post for the background above and below photo(s)*/",
+	"._aatg ._aatk {",
+	"    background-color: #000 !important;",
 	"}",
 	"/* 3 dots for more options, icons on the nav bar and posts, and other elements */",
 	"/* Added [color=\"#262626\"] to not change red color of like activated button [for liked posts & liked replies] and blue color of checkmark (inside \"Switch Accounts\" thing) + perhaps other things I'm not aware of?! */",
@@ -125,13 +125,29 @@
 	"    background-color: #2e2e2e !important;",
 	"}",
 	"/* Fixes for posts in main feed */",
-	"._aatc ._aasu {",
+	"._aatc ._ae1l {",
 	"    border-top-right-radius: 0 !important;",
 	"    border-top-left-radius: 0 !important;",
 	"}",
 	"._aatc ._aasj {",
 	"    border-bottom-right-radius: 0 !important;",
 	"    border-bottom-left-radius: 0 !important;",
+	"}",
+	"._ab0q {",
+	"    border-color: rgb(var(--ig-secondary-background)) !important;",
+	"}",
+	"._ab0u {",
+	"    border: 2px solid rgb(var(--ig-secondary-background)) !important;",
+	"}",
+	"@media (min-resolution: 2dppx) {",
+	"    ._ab0q::before {",
+	"        border-color: rgb(var(--ig-secondary-background)) !important;",
+	"    }",
+	"}",
+	"@media (min-resolution: 2dppx) {",
+	"    ._ab0u::before {",
+	"        border: 5px solid rgb(var(--ig-secondary-background)) !important;",
+	"    }",
 	"}",
 	"/* Lighter loading circle (some elements that are not really the loading circle have no [style], so add [style]) */",
 	"/* \"_ac0e\" is a class used for Stories page, add it to not invert loading circle in there */",
@@ -184,14 +200,14 @@
 	"._aa5u, ._aa5_, .AvhYw, .uo5MA, ._ad8j {",
 	"    box-shadow: 0 0 5px 3px rgba(var(--web-always-black), .9) !important;",
 	"}",
-	"/* Fix for https://instagram.com/accounts/edit/ */",
-	"div._ab4h > h1._ab4i {",
-	"    color: #e1e1e1 !important;",
-	"}",
-	"/* Fixes for https://instagram.com/accounts/contact_history/ */",
-	"p._aaj5, p._aaj9 {",
-	"    color: rgb(var(--ig-primary-text)) !important;",
-	"}",
+	//"/* Fix for https://instagram.com/accounts/edit/ */",
+	//"div._ab4h > h1._ab4i {",
+	//"    color: #e1e1e1 !important;",
+	//"}",
+	//"/* Fixes for https://instagram.com/accounts/contact_history/ */",
+	//"p._aaj5, p._aaj9 {",
+	//"    color: rgb(var(--ig-primary-text)) !important;",
+	//"}",
 	"/* \"#\" in a circle, when user doesn't follow any hashtags */",
 	"._aabo {",
 	"    border: 1.5px solid #fafafa !important;",
@@ -257,10 +273,10 @@
 	"/* Fixing IG's own issue... */",
 	"    border-radius: 0 !important;",
 	"}",
-	//"/* Cookie notice */",
-	//".FrS-d .aOOlW:active {",
-	//"    background-color: #363636 !important;",
-	//"}",
+	"/* Cookie notice */",
+	".FrS-d .aOOlW:active {",
+	"    background-color: #363636 !important;",
+	"}",
 	"/* Fix after there's no follow requests in Activity menu */",
 	"._ab8j {",
 	"    border: 0 !important;",
