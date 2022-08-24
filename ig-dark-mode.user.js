@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.5.6
+// @version				1.5.7
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -150,8 +150,8 @@
 	"    }",
 	"}",
 	"/* Lighter loading circle (some elements that are not really the loading circle have no [style], so add [style]) */",
-	"/* \"_ac0e\" is a class used for Stories page, add it to not invert loading circle in there */",
-	":not(._ac0e) > [data-visualcompletion=\"loading-state\"][style] {",
+	"/* \"_ac0e\" is a class used for Stories page + \"_acas\" is the blue profile button (Follow) - add it to not invert loading circle in there */",
+	":not(._ac0e, ._acas) > [data-visualcompletion=\"loading-state\"][style] {",
 	"    filter: invert(1) !important;",
 	"}",
 	"/* Private Policy update notice */",
@@ -253,7 +253,7 @@
 	"   border-top: 6px solid rgba(0, 0, 0, .5) !important;",
 	"}",
 	"/* Text on disabled/inactive blue buttons */",
-	".L3NKy[disabled], ._acas[disabled]:not(._acao):not(._acax), a._acas[disabled]:not(._acao):not(._acax) {",
+	".L3NKy[disabled], ._acas[disabled]:not(._acao, ._acax), a._acas[disabled]:not(._acao, ._acax) {",
 	"    color: #616161 !important;",
 	"}",
 	"/* https://www.instagram.com/challenge/action/ */",
@@ -283,12 +283,8 @@
 	"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
 	"}",
 	"/* New profile buttons, inspired from mobile app */",
-	"*:not(._aa_m)>*>*>*>._acap:not(._acas):not(._acav), ._4pI4F._8A5w5 {",
-	"    background-color: #4a4a4a !important;",
-	"    border: 1px solid transparent !important;",
-	"}",
-	"._acap:not(._acas), .L3NKy._8A5w5:not(._4pI4F) {",
-	"    background-color: #383838 !important;",
+	"._acap:not(._acas), .L3NKy._8A5w5 {",
+	"    background-color: #464646 !important;",
 	"    border: 1px solid transparent !important;",
 	"}",
 	"/* General border used around circular profile pics within Instagram + hashtags */",
@@ -425,7 +421,7 @@
 	"    background: rgb(82, 82, 82) !important;",
 	"}",
 	"/* Stuff for Help section, for instance here: https://instagram.com/settings/help/ */",
-	"[data-bloks-name][style*=\"background: rgb(255, 255, 255)\"]:not([style*=\"top: 1.5px; left: 1.5px\"]):not([style*=\"top: 8px; left: 8px\"]) {",
+	"[data-bloks-name][style*=\"background: rgb(255, 255, 255)\"]:not([style*=\"top: 1.5px; left: 1.5px\"], [style*=\"top: 8px; left: 8px\"]) {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
 	"}",
 	"[data-bloks-name][style*=\"background: rgb(239, 239, 239)\"] {",
@@ -469,7 +465,7 @@ if (typeof GM_addStyle != "undefined") {
 	if (heads.length > 0) {
 		heads[0].appendChild(node);
 	} else {
-		// no head yet, stick it whereever
+		// no head yet, stick it wherever
 		document.documentElement.appendChild(node);
 	}
 }
