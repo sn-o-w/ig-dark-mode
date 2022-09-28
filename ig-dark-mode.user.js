@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.5.8
+// @version				1.5.9
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -19,7 +19,7 @@
 	"body {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	"/* Elements on a page when leaving Instagram in order to follow a link */",
+	"/* Elements on a page when leaving Instagram in order to follow a link + https://instagram.com/accounts/one_click_login_error/invalid_link/ */",
 	".-cx-PRIVATE-NavBar__root__ {",
 	"    background-color: rgb(var(--ig-primary-background)) !important;",
 	"    border-bottom: 1px solid rgb(var(--ig-elevated-separator)) !important;",
@@ -27,7 +27,7 @@
 	".-cx-PRIVATE-NavBar__logo__ {",
 	"    filter: invert(1) !important;",
 	"}",
-	".-cx-PRIVATE-NavBar__username__, .-cx-PRIVATE-ErrorPage__errorContainer__ a, .-cx-PRIVATE-Footer__navItems__ a {",
+	".-cx-PRIVATE-NavBar__username__, .-cx-PRIVATE-ErrorPage__errorContainer__ a, .-cx-PRIVATE-Footer__navItems__ a, .-cx-PRIVATE-NavBar__signInText__ {",
 	"    color: rgb(var(--ig-link)) !important;",
 	"}",
 	".-cx-PRIVATE-Linkshim__followLink__ {",
@@ -57,7 +57,7 @@
 	"    --ce3: 58,58,58 !important;", //modified
 	"    --jd9: 255,255,255 !important;",
 	"    --j64: 219,219,219 !important;",
-	"    --a97: 58,58,58 !important;", //modified
+	"    --a97: 50,50,50 !important;", //modified
 	"    --d20: 250,250,250 !important;",
 	"",
 	"    --challenge-link: 219,219,219 !important;",
@@ -73,7 +73,7 @@
 	"    --ig-secondary-background: 10,10,10 !important;", //modified
 	"    --ig-secondary-button: 250,250,250 !important;",
 	"    --ig-secondary-text: 160,160,160 !important;", //modified
-	"    --ig-separator: 58,58,58 !important;", //modified
+	"    --ig-separator: 94,94,94 !important;", //modified
 	"    --ig-stroke: 94,94,94 !important;", //modified
 	"    --ig-temporary-highlight: 0,149,246 !important;",
 	"    --ig-tertiary-text: 130,130,130 !important;", //modified
@@ -167,8 +167,8 @@
 	"    }",
 	"}",
 	"/* Lighter loading circle (some elements that are not really the loading circle have no [style], so add [style]) */",
-	"/* \"_ac0e\" is a class used for Stories page + \"_acas\" is the blue profile button (Follow) - add it to not invert loading circle in there */",
-	":not(._ac0e, ._acas) > [data-visualcompletion=\"loading-state\"][style] {",
+	"/* \"_ac6a\" is a class used for Stories page + \"_acas\" is the blue profile button (Follow) - add it to not invert loading circle in there */",
+	":not(._ac6a, ._acas) > [data-visualcompletion=\"loading-state\"][style] {",
 	"    filter: invert(1) !important;",
 	"}",
 	"/* Private Policy update notice */",
@@ -294,13 +294,14 @@
 	".FrS-d .aOOlW:active {",
 	"    background-color: #363636 !important;",
 	"}",
-	"/* Fix after there's no follow requests in Activity menu */",
-	"._ab8j {",
-	"    border: 0 !important;",
-	"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
-	"}",
+	//"/* Fix after there's no follow requests in Activity menu */",
+	//"._ab8j {",
+	//"    border: 0 !important;",
+	//"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
+	//"}",
 	"/* New profile buttons, inspired from mobile app */",
-	"._acap:not(._acas), .L3NKy._8A5w5 {",
+	"/* \"._acas\" is used for blue Follow button, \"._acav\" used as \"View story\" button */",
+	"._acap:not(._acas, ._acav), .L3NKy._8A5w5 {",
 	"    background-color: #464646 !important;",
 	"    border: 1px solid transparent !important;",
 	"}",
@@ -339,11 +340,23 @@
 	"    }",
 	"}",
 	"/* https://instagram.com/accounts/login/ especially when you are not logged in */",
-	".iZH34, .gr27e {",
+	".UDpcu, .vfoLd {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
+	//".iZH34, .gr27e {",
+	//"    background-color: rgb(var(--ig-secondary-background)) !important;",
+	//"}",
+	//".iZH34, .gr27e {",
+	//"    background-color: rgb(var(--ig-secondary-background)) !important;",
+	//"}",
+	".zyHYP:-webkit-autofill {",
+	"    box-shadow: 0 0 0 30px rgb(var(--ig-secondary-background)) inset !important;",
+	"}",
+	//"._9GP1n, ._2hvTZ, .PdTAI {",
+	//"    background: rgb(var(--ig-primary-background)) !important;",
+	//"}",
 	"._9GP1n, ._2hvTZ, .PdTAI {",
-	"    background: rgb(var(--ig-primary-background)) !important;",
+	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	".coreSpriteOptionsEllipsis, .glyphsSpriteFrom_meta {",
 	"    filter: invert(1) !important;",
@@ -406,14 +419,11 @@
 	"    filter: invert(1) !important;",
 	"}",
 	"/* Long lines in between accounts + color text for accounts, used here: https://instagram.com/accounts/login/ */",
-	".o06Gi {",
-	"    border: solid 1px #2c2c2c !important;",
+	"._ab2f {",
+	"    color: rgb(var(--ig-primary-text)) !important;",
 	"}",
-	".lAPmk {",
-	"    border-color: #4a4a4a !important;",
-	"}",
-	".l9hKg {",
-	"    color: #e6e6e6 !important;",
+	"._ab2m {",
+	"    border-color: rgb(var(--post-separator)) !important;",
 	"}",
 	"/* More visible \"Log in with Facebook\" at the login page */",
 	".KPnG0 {",
