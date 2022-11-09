@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.6.3
+// @version				1.6.4
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -187,6 +187,11 @@
 	"    color: #e8e8e8 !important;",
 	"    fill: #e8e8e8 !important;",
 	"}",
+	"/* Back button at the top in this page https://instagram.com/?variant=following */",
+	"._ab95._abb- .x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"] {",
+	"    color: #e8e8e8 !important;",
+	"    fill: #e8e8e8 !important;",
+	"}",
 	"/* \"Create new post\" enhacements for filters slider(s) */",
 	"._ac2y:not(._ac2-) {",
 	"    filter: invert(1) brightness(2.6) !important;",
@@ -340,12 +345,11 @@
 	"    background-color: rgb(var(--ig-primary-background)) !important;",
 	"}",
 	"/* General selector */",
-	//"._abm4:hover:not(:focus), ._abn_, .-qQT3:hover:not(:focus), ._aeas:hover:not(:focus), .x1l895ks:hover:not(:focus), ._ab85>*>.x78zum5:hover:not(._ab87):not(:focus) {",
-	"._abm4:hover:not(:focus), ._aeas:hover:not(:focus), .x1l895ks:hover:not(:focus), ._ab85>*>.x78zum5:hover:not(._ab87):not(:focus) {",
+	"/* \"._abn_\" used within search results */",
+	"._abm4:hover:not(:focus), ._abn_, .-qQT3:hover:not(:focus), ._aeas:hover:not(:focus), .x1l895ks:hover:not(:focus), ._ab85>*>.x78zum5:hover:not(._ab87):not(:focus) {",
 	"    background: #2e2e2e !important;",
 	"}",
-	//"._abm4:focus, .-qQT3:focus, ._aeas:focus {",
-	"._aeas:focus {",
+	"._aeas:focus, .-qQT3:focus {",
 	"    background: #424242 !important;",
 	"}",
 	"/* Selectors for more options of an account */",
@@ -404,6 +408,10 @@
 	"    ._ab5d::after {",
 	"        border-color: rgb(217,217,217) !important;",
 	"    }",
+	"}",
+	"/* Background necessary when accesing a link of an Instagram effect */",
+	".OOEGs {",
+	"    background-color: rgb(var(--ig-primary-background)) !important;",
 	"}",
 	"/* https://instagram.com/accounts/login/ especially when you are not logged in */",
 	".UDpcu, .vfoLd {",
