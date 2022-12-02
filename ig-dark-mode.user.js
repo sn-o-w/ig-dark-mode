@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.6.5
+// @version				1.6.6
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -60,6 +60,7 @@
 	"    --a97: 50,50,50 !important;", //modified
 	"    --d20: 250,250,250 !important;",
 	"",
+	"    --blue-2: #244A67 !important;", //modified
 	"    --challenge-link: 219,219,219 !important;",
 	"    --docpen-lightgrey: 65,65,65 !important;", //modified
 	"    --ig-banner-background: 28,28,28 !important;", //modified
@@ -161,6 +162,10 @@
 	"._aac4 {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
 	"}",
+	"/* Fixes for post in focus when extremely zoomed in */",
+	"._aasi._aask {",
+	"    background-color: rgb(var(--ig-primary-background)) !important;",
+	"}",
 	"/* The vertical bar above \"Use the App\" (Android user agent) */",
 	"._acc8 {",
 	"    border-top: 1px solid rgba(var(--ig-elevated-separator), .7) !important;",
@@ -168,14 +173,17 @@
 	"/* 3 dots for more options, icons on the nav bar and posts, and other elements */",
 	"/* Added [color=\"#262626\"] to not change red color of like activated button [for liked posts & liked replies] and blue color of checkmark (inside \"Switch Accounts\" thing) + perhaps other things I'm not aware of?! */",
 	"/* Added :not(._ab9y._aba8, ._aagx) to avoid changing the colors inside \"Create new post\" small bottom elements + the Instagram logo */",
-	"*:not(._ab9y._aba8, ._aagx)>._ab6-[color=\"#262626\"][fill=\"#262626\"], ._8-yf5[color=\"#262626\"][fill=\"#262626\"] {",
+	"/* Back button at the top in this page https://instagram.com/?variant=following + https://instagram.com/?variant=past_posts */",
+	"/* Lock symbol, inside acc mini previews, for private accs + \"No photos\" in acc mini preview */",
+	"*:not(._ab9y._aba8, ._aagx)>._ab6-[color=\"#262626\"][fill=\"#262626\"], ._8-yf5[color=\"#262626\"][fill=\"#262626\"], ._aam5>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._aam5>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._ab1a>*>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._aap3 .x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"] {",
 	"    color: #e8e8e8 !important;",
 	"    fill: #e8e8e8 !important;",
 	"}",
-	"/* Back button at the top in this page https://instagram.com/?variant=following */",
-	"._ab95._abb- .x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"] {",
-	"    color: #e8e8e8 !important;",
-	"    fill: #e8e8e8 !important;",
+	"/* Down chevron icon, used to see suggested accounts within any acc page // Old UI */",
+	"/*Added :not(._aaqh)>*>*>*> to not interfere with focused post, on entire page */",
+	":not(._aaqh)>*>*>*>._ab6-[color=\"#000000\"][fill=\"#000000\"] {",
+	"    color: #ffffff !important;",
+	"    fill: #ffffff !important;",
 	"}",
 	"/* \"Create new post\" enhacements for filters slider(s) */",
 	"._ac2y:not(._ac2-) {",
@@ -334,7 +342,7 @@
 	"._abm4:hover:not(:focus), ._abn_, .-qQT3:hover:not(:focus), ._aeas:hover:not(:focus), .x1l895ks:hover:not(:focus), ._ab85>*>.x78zum5:hover:not(._ab87):not(:focus) {",
 	"    background: #2e2e2e !important;",
 	"}",
-	"._aeas:focus, .-qQT3:focus {",
+	"._aeas:focus, .-qQT3:focus, ._ab85>*>.x78zum5._ab88:focus:not(._ab87) {",
 	"    background: #424242 !important;",
 	"}",
 	"/* Selectors for more options of an account */",
@@ -460,7 +468,7 @@
 	"    background: #2b2b2b !important;",
 	"}",
 	"/* Circle border for the location, for instance here: https://instagram.com/explore/locations/100171148223508/paris-france/ */",
-	".VU4al::after {",
+	"._abwv::after {",
 	"    border: 1px solid rgba(255,255,255,.0975) !important;",
 	"}",
 	"/* Graphical symbols */",
@@ -501,6 +509,13 @@
 	"[data-bloks-name=\"ig.components.Icon\"][style*=\"background-color: rgb(0, 0, 0)\"] {",
 	"    background-color: rgb(255, 255, 255) !important;",
 	"}",
+	"/* Sort and filter for https://instagram.com/your_activity/ */",
+	"[data-bloks-name][style*=\"background: rgba(239, 239, 239, 0.7)\"] {",
+	"    background: rgba(239, 239, 239, 0.24) !important;",
+	"}",
+	"[data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: rgb(224, 241, 255)\"] {",
+	"    background: rgb(33, 48, 82) !important;",
+	"}",
 	"/* https://instagram.com/accounts/privacy_and_security/ */",
 	"[data-bloks-name][style*=\"background: rgb(219, 219, 219)\"]~[data-bloks-name][style*=\"background: rgb(255, 255, 255)\"][style*=\"top: 8px; left: 8px\"] {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
@@ -518,9 +533,6 @@
 	"}",
 	"[data-bloks-name][style*=\"background: rgb(239, 239, 239)\"] {",
 	"    background: rgb(var(--post-separator)) !important;",
-	"}",
-	"[data-bloks-name][style*=\"background-color: rgb(255, 255, 255)\"]:not([style*=\"border-bottom: 1px solid rgb(219, 219, 219)\"]) {",
-	"    background-color: rgb(var(--ig-primary-background)) !important;",
 	"}",
 	"[data-bloks-name][style*=\"background: rgb(250, 250, 250)\"] {",
 	"    background: rgb(39, 39, 39) !important;",
