@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.6.6
+// @version				1.6.7
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -15,9 +15,9 @@
 	":root {",
 	"    color-scheme: dark !important;",
 	"}",
-	"/* Black background for <body>, useful in the first milisecs when the page is loaded */",
-	"body {",
-	"    background-color: rgb(var(--ig-secondary-background)) !important;",
+	"/* Black background for #splash-screen, useful in the first milisecs when the page is loaded */",
+	"#splash-screen {",
+	"    background: #000 !important;",
 	"}",
 	"/* Elements on a page when leaving Instagram in order to follow a link + https://instagram.com/accounts/one_click_login_error/invalid_link/ + account doesn't exist anymore */",
 	".-cx-PRIVATE-NavBar__root__ {",
@@ -180,7 +180,7 @@
 	"    fill: #e8e8e8 !important;",
 	"}",
 	"/* Down chevron icon, used to see suggested accounts within any acc page // Old UI */",
-	"/*Added :not(._aaqh)>*>*>*> to not interfere with focused post, on entire page */",
+	"/* Added :not(._aaqh)>*>*>*> to not interfere with focused post, on entire page */",
 	":not(._aaqh)>*>*>*>._ab6-[color=\"#000000\"][fill=\"#000000\"] {",
 	"    color: #ffffff !important;",
 	"    fill: #ffffff !important;",
@@ -339,14 +339,18 @@
 	"}",
 	"/* General selector */",
 	"/* \"._abn_\" used within search results */",
-	"._abm4:hover:not(:focus), ._abn_, .-qQT3:hover:not(:focus), ._aeas:hover:not(:focus), .x1l895ks:hover:not(:focus), ._ab85>*>.x78zum5:hover:not(._ab87):not(:focus) {",
+	"/* *:not(.xivu535)>*>*>*>.x1l895ks used for https://instagram.com/accounts/activity/ */",
+	"._abm4:hover:not(:focus), ._abn_, .-qQT3:hover:not(:focus), ._aeas:hover:not(:focus), *:not(.xivu535)>*>*>*>.x1l895ks:hover:not(:focus), ._ab85>*>.x78zum5:hover:not(._ab87):not(:focus) {",
 	"    background: #2e2e2e !important;",
 	"}",
 	"._aeas:focus, .-qQT3:focus, ._ab85>*>.x78zum5._ab88:focus:not(._ab87) {",
 	"    background: #424242 !important;",
 	"}",
+	".xivu535>*>*>*>.x1l895ks:active {",
+	"    background: #535353 !important;",
+	"}",
 	"/* Selectors for more options of an account */",
-	".aOOlW:active {",
+	"._a9--:active {",
 	"    background: #363636 !important;",
 	"/* Fixing IG's own issue... | Still not fixed; woooow, Instagram... :/ */",
 	"    border-radius: 0 !important;",
@@ -390,7 +394,7 @@
 	"    box-shadow: rgba(0,0,0,.9) 0 4px 22px !important;",
 	"}",
 	"/* Account mini previews */",
-	"._aap3 {",
+	".x1rj4ezl {",
 	"    box-shadow: 0 0 5px 3px rgba(0, 0, 0, .9), 0 0 0 1px rgb(0, 0, 0) !important;",
 	"}",
 	"/* There are some subtle circle border in acc minipreviews */",
