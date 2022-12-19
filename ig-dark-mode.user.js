@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.7.0
+// @version				1.7.1
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -76,6 +76,7 @@
 	"    --ig-primary-text: 250,250,250 !important;",
 	"    --ig-secondary-background: 10,10,10 !important;", //modified
 	"    --ig-secondary-button: 250,250,250 !important;",
+	"    --ig-secondary-button-background: 58,58,58 !important;", //modified
 	"    --ig-secondary-text: 160,160,160 !important;", //modified
 	"    --ig-separator: 94,94,94 !important;", //modified
 	"    --ig-stroke: 94,94,94 !important;", //modified
@@ -92,7 +93,7 @@
 	"/* It looks like Instagram started to enforce their dark mode on browsers having the dark mode enabled */",
 	"/* ._ab21>*>*>i[style*=\"https://static.cdninstagram.com\"] is used on login page */",
 	"._acum ._aagx>*, .xvbhtw8 ._aagx>*[color=\"#262626\"][fill=\"#262626\"], .s4Iyt, ._ab21>*>*>i[style*=\"https://static.cdninstagram.com\"] {",
-	"    filter: invert(1) !important;",
+	"    filter: invert(1) brightness(1.15) !important;",
 	"}",
 	"/* Some pages still have \"selectable\" Instagram logo :/ */",
 	".s4Iyt::selection {",
@@ -139,6 +140,16 @@
 	".x17j9fnh {",
 	"    border-left-color: rgb(var(--ig-elevated-separator)) !important;",
 	"}",
+	"/* https://www.instagram.com/reels/videos/ */",
+	".xvbhtw8 .xvbhtw8:not(.x1cy8zhl) {",
+	"    background-color: rgb(var(--ig-secondary-background)) !important;",
+	"}",
+	".xuzhngd {",
+	"    opacity: 0.17 !important;",
+	"}",
+	".xjasm6b {",
+	"    background-color: #1b1b1b !important;",
+	"}",
 	"/* Left and right arrows, especially for browsing between highlights/suggested accounts */",
 	"._9zs0 {",
 	"    background-position: -303px -234.5px !important;",
@@ -179,9 +190,16 @@
 	"/* Added :not(._ab9y._aba8, ._aagx) to avoid changing the colors inside \"Create new post\" small bottom elements + the Instagram logo */",
 	"/* Back button at the top in this page https://instagram.com/?variant=following + https://instagram.com/?variant=past_posts */",
 	"/* Lock symbol, inside acc mini previews, for private accs + \"No photos\" in acc mini preview */",
-	"*:not(._ab9y._aba8, ._aagx)>._ab6-[color=\"#262626\"][fill=\"#262626\"], ._8-yf5[color=\"#262626\"][fill=\"#262626\"], ._aam5>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._aam5>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._ab1a>*>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._aap3 .x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"] {",
-	"    color: #e8e8e8 !important;",
-	"    fill: #e8e8e8 !important;",
+	"*:not(._ab9y._aba8, ._aagx)>._ab6-[color=\"#262626\"][fill=\"#262626\"], ._8-yf5[color=\"#262626\"][fill=\"#262626\"], ._aam5>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._aam5>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._ab1a>*>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._aap3 .x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], .x1bhewko>*>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"] {",
+	"    color: #fafafa !important;",
+	"    fill: #fafafa !important;",
+	"}",
+	"/* Fixes for new profile buttons, by default they look ugly currently */",
+	"._acat._aijb:hover, .xsz8vos:hover {",
+	"    background: #585858 !important;",
+	"}",
+	"._acat._aijb, ._abb3 .xwhw2v2 {",
+	"    color: rgb(var(--ig-primary-text)) !important;",
 	"}",
 	"/* Down chevron icon, used to see suggested accounts within any acc page // Old UI */",
 	"/* Added :not(._aaqh)>*>*>*> to not interfere with focused post, on entire page */",
@@ -263,7 +281,7 @@
 	"._aa4d ._9-_u {",
 	"    filter: invert(1) !important;",
 	"}",
-	".leaflet-marker-icon {",
+	"._ac8w>*>*>*>*>.leaflet-marker-icon {",
 	"    filter: invert(47%) sepia(98%) saturate(3500%) hue-rotate(325deg) brightness(95%) contrast(105%) !important;",
 	"}",
 	"/* https://instagram.com/qr/ */",
@@ -342,7 +360,7 @@
 	"   border-top: 6px solid rgba(0, 0, 0, .5) !important;",
 	"}",
 	"/* Text on disabled/inactive blue buttons */",
-	".L3NKy[disabled], ._acas[disabled]:not(._acao, ._acax), a._acas[disabled]:not(._acao, ._acax) {",
+	".L3NKy[disabled], a._acas[disabled]:not(._acao, ._acax) {",
 	"    color: #616161 !important;",
 	"}",
 	"/* https://www.instagram.com/challenge/action/ */",
@@ -377,12 +395,6 @@
 	"/* Cookie notice */",
 	".xb88tzc ._a9--:active {",
 	"    background-color: #363636 !important;",
-	"}",
-	"/* New profile buttons, inspired from mobile app */",
-	"/* \"._acas\" is used for blue Follow button, \"._acav\" used as \"View story\" button, \"._acau\" is used for \"See why\" when Sensitive Content */",
-	".x1xp9za0, ._acap:not(._acas, ._acav, ._acau), .L3NKy._8A5w5 {",
-	"    background-color: #464646 !important;",
-	"    border: 1px solid transparent !important;",
 	"}",
 	"/* General border used around circular profile pics within Instagram + hashtags */",
 	"/* Added \":not(._ac0l, ._ac0h, ._aa64)\" to not modify circle borders within Stories page; Stories page has a dark background, so no need to edit in there! */",
@@ -534,7 +546,7 @@
 	"    background: rgba(239, 239, 239, 0.24) !important;",
 	"}",
 	"[data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: rgb(224, 241, 255)\"] {",
-	"    background: rgb(33, 48, 82) !important;",
+	"    background: rgb(39, 55, 93) !important;",
 	"}",
 	"[data-bloks-name][style*=\"background: rgb(0, 0, 0)\"] {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
