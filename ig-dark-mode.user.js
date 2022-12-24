@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.7.1
+// @version				1.7.2
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -198,8 +198,14 @@
 	"._acat._aijb:hover, .xsz8vos:hover {",
 	"    background: #585858 !important;",
 	"}",
-	"._acat._aijb, ._abb3 .xwhw2v2 {",
+	"._acat._aijb, ._abb3 .xwhw2v2, .x19g8pj0 .xwhw2v2 {",
 	"    color: rgb(var(--ig-primary-text)) !important;",
+	"}",
+	"/* New profile buttons, inspired from mobile app // Still needed this for the old UI */",
+	"/* \"._acas\" is used for blue Follow button, \"._acav\" used as \"View story\" button, \"._acau\" is used for \"See why\" when Sensitive Content */",
+	".x1xp9za0, ._acap:not(._acas, ._acav, ._acau), .L3NKy._8A5w5 {",
+	"    background-color: #585858 !important;",
+	"    border: 1px solid transparent !important;",
 	"}",
 	"/* Down chevron icon, used to see suggested accounts within any acc page // Old UI */",
 	"/* Added :not(._aaqh)>*>*>*> to not interfere with focused post, on entire page */",
