@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.7.2
+// @version				1.7.3
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -77,6 +77,7 @@
 	"    --ig-secondary-background: 10,10,10 !important;", //modified
 	"    --ig-secondary-button: 250,250,250 !important;",
 	"    --ig-secondary-button-background: 58,58,58 !important;", //modified
+	"    --ig-secondary-button-hover: 88,88,88 !important;", //modified
 	"    --ig-secondary-text: 160,160,160 !important;", //modified
 	"    --ig-separator: 94,94,94 !important;", //modified
 	"    --ig-stroke: 94,94,94 !important;", //modified
@@ -195,16 +196,13 @@
 	"    fill: #fafafa !important;",
 	"}",
 	"/* Fixes for new profile buttons, by default they look ugly currently */",
-	"._acat._aijb:hover, .xsz8vos:hover {",
-	"    background: #585858 !important;",
-	"}",
 	"._acat._aijb, ._abb3 .xwhw2v2, .x19g8pj0 .xwhw2v2 {",
 	"    color: rgb(var(--ig-primary-text)) !important;",
 	"}",
 	"/* New profile buttons, inspired from mobile app // Still needed this for the old UI */",
-	"/* \"._acas\" is used for blue Follow button, \"._acav\" used as \"View story\" button, \"._acau\" is used for \"See why\" when Sensitive Content */",
-	".x1xp9za0, ._acap:not(._acas, ._acav, ._acau), .L3NKy._8A5w5 {",
-	"    background-color: #585858 !important;",
+	"/* \"._acas\" is used for blue Follow button, \"._acav\" used as \"View story\" button, \"._acau\" is used for \"See why\" when Sensitive Content, \"._aijb\" used within new UI */",
+	"._aa4c .x1xp9za0, ._aa4c ._acap:not(._acas, ._acav, ._acau, ._aijb), .L3NKy._8A5w5 {",
+	"    background-color: rgb(var(--ig-secondary-button-background)) !important;",
 	"    border: 1px solid transparent !important;",
 	"}",
 	"/* Down chevron icon, used to see suggested accounts within any acc page // Old UI */",
@@ -551,8 +549,11 @@
 	"[data-bloks-name][style*=\"background: rgba(239, 239, 239, 0.7)\"] {",
 	"    background: rgba(239, 239, 239, 0.24) !important;",
 	"}",
-	"[data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: rgb(224, 241, 255)\"] {",
+	"[data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: rgb(224, 241, 255)\"], [data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: rgb(255, 255, 255)\"][style*=\"padding: 8px 12px\"] {",
 	"    background: rgb(39, 55, 93) !important;",
+	"}",
+	"[data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: rgb(255, 255, 255)\"][style*=\"padding: 8px 12px\"] > * > [data-bloks-name=\"bk.components.TextSpan\"][style*=\"color: rgb(0, 0, 0)\"] {",
+	"    color: rgb(0, 149, 246) !important;",
 	"}",
 	"[data-bloks-name][style*=\"background: rgb(0, 0, 0)\"] {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
@@ -569,7 +570,7 @@
 	"[data-bloks-name=\"bk.components.TextSpan\"][style*=\"color: rgb(38, 38, 38)\"], [data-bloks-name=\"bk.components.Text\"][style*=\"color: rgb(38, 38, 38)\"] {",
 	"    color: rgb(250, 250, 250) !important;",
 	"}",
-	"[data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: rgb(255, 255, 255)\"] {",
+	"[data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: rgb(255, 255, 255)\"]:not([style*=\"padding: 8px 12px\"]) {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
 	"}",
 	"[data-bloks-name][style*=\"background: rgb(239, 239, 239)\"] {",
