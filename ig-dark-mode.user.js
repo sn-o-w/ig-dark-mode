@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.7.4
+// @version				1.7.5
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -142,11 +142,14 @@
 	"    border-left-color: rgb(var(--ig-elevated-separator)) !important;",
 	"}",
 	"/* https://www.instagram.com/reels/videos/ */",
-	".xvbhtw8 .xvbhtw8:not(.x1cy8zhl) {",
+	".x1f91t4q .xvb8j5 {",
+	"    border-right: 1px solid rgb(var(--ig-separator)) !important;",
+	"}",
+	".xvbhtw8 .xvbhtw8:not(.x1cy8zhl, .x12v9rci) {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	".xuzhngd {",
-	"    opacity: 0.17 !important;",
+	"    opacity: 0.26 !important;",
 	"}",
 	".xjasm6b {",
 	"    background-color: #1b1b1b !important;",
@@ -207,12 +210,12 @@
 	"    fill: #fafafa !important;",
 	"}",
 	"/* Fixes for new profile buttons, by default they look ugly currently */",
-	"._acat._aijb, section.xs83m0k .xwhw2v2, .x19g8pj0 .xwhw2v2 {",
+	"._acat._aj1-, section.xs83m0k .xwhw2v2, .x19g8pj0 .xwhw2v2 {",
 	"    color: rgb(var(--ig-primary-text)) !important;",
 	"}",
 	"/* New profile buttons, inspired from mobile app // Still needed this for the old UI */",
-	"/* \"._acas\" is used for blue Follow button, \"._acav\" used as \"View story\" button, \"._acau\" is used for \"See why\" when Sensitive Content, \"._aijb\" used within new UI */",
-	"._aa4c .x1xp9za0, ._aa4c ._acap:not(._acas, ._acav, ._acau, ._aijb), .L3NKy._8A5w5 {",
+	"/* \"._acas\" is used for blue Follow button, \"._acav\" used as \"View story\" button, \"._acau\" is used for \"See why\" when Sensitive Content */",
+	"._aa4c .x1xp9za0, ._aa4c ._acap:not(._acas, ._acav, ._acau, ._aj1-), .L3NKy._8A5w5 {",
 	"    background-color: rgb(var(--ig-secondary-button-background)) !important;",
 	"    border: 1px solid transparent !important;",
 	"}",
@@ -277,14 +280,14 @@
 	"}",
 	"/* Lighter loading circle (some elements that are not really the loading circle have no [style], so add [style]) */",
 	"/* \"._ac6a\" is a class used for Stories page + \"._acas\" is the blue profile button (Follow) - add it to not invert loading circle in there + make color more lighter for these two cases */",
-	"/* \"._acat._aijb\" used when Follow button is in Requested state, make loading circle a little darker */",
+	"/* \"._acat._aj1-\" used when Follow button is in Requested state, make loading circle a little darker */",
 	"*:not(._ac6a, ._acas) > [data-visualcompletion=\"loading-state\"][style] {",
 	"    filter: invert(1) brightness(1.25) !important;",
 	"}",
 	"._ac6a > [data-visualcompletion=\"loading-state\"][style], ._acas > [data-visualcompletion=\"loading-state\"][style] {",
 	"    filter: brightness(1.25) !important;",
 	"}",
-	"._acat._aijb > [data-visualcompletion=\"loading-state\"][style] {",
+	"._acat._aj1- > [data-visualcompletion=\"loading-state\"][style] {",
 	"    filter: brightness(0.75) !important;",
 	"}",
 	"/* Private Policy update notice */",
