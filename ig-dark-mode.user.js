@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.7.5
+// @version				1.7.6
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -11,6 +11,20 @@
 // @run-at				document-start
 // ==/UserScript==
 (function() {var css = [
+	"/* Temporary fixes for main page // Delete after IG fixes their own mess */",
+	"._aggc, ._ab6q+._aac6>*>._aao_, ._aa25, ._ab6o:not(._ab6q)+._aac6 {",
+	"    border-radius: 3px !important;",
+	"    border-top: 1px solid rgb(var(--ig-separator)) !important;",
+	"    border-left: 1px solid rgb(var(--ig-separator)) !important;",
+	"    border-right: 1px solid rgb(var(--ig-separator)) !important;",
+	"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
+	"}",
+	"section.x78zum5 > .xvbhtw8, ._agh4, ._ab8s, ._ab6q, ._aac6, ._abc0, ._aac4, ._aam1 {",
+	"    background: rgb(var(--ig-secondary-background)) !important;",
+	"}",
+	"._aauo, ._aa26, ._ab6o:not(._ab6q)+._aac6 {",
+	"    background: rgb(var(--ig-primary-background)) !important;",
+	"}",
 	"/* Define dark mode to get specific scrollbars */",
 	":root {",
 	"    color-scheme: dark !important;",
@@ -145,7 +159,8 @@
 	".x1f91t4q .xvb8j5 {",
 	"    border-right: 1px solid rgb(var(--ig-separator)) !important;",
 	"}",
-	".xvbhtw8 .xvbhtw8:not(.x1cy8zhl, .x12v9rci) {",
+	//".xvbhtw8 .x182iqb8.xvbhtw8:not(.x1cy8zhl, .x12v9rci) {",
+	".xvbhtw8 .x182iqb8.xvbhtw8, .xvbhtw8 .x182iqb8.xvbhtw8 > .xvbhtw8 {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	".xuzhngd {",
@@ -181,10 +196,10 @@
 	"._a3wf ._a994 {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	"/* Stories rectangle (force it for Android user agent) */",
-	"._aac4 {",
-	"    background: rgb(var(--ig-primary-background)) !important;",
-	"}",
+	//"/* Stories rectangle (force it for Android user agent) */",
+	//"._aac4 {",
+	//"    background: rgb(var(--ig-primary-background)) !important;",
+	//"}",
 	"/* Circular border for viewed stories + highlights section / More lighter color */",
 	"._aa4d ._aarf>canvas:not([style*=\"width: 42px; height: 42px;\"], [style*=\"width: 54px; height: 54px;\"], [style*=\"width: 66px; height: 66px;\"], [style*=\"width: 91px; height: 91px;\"], [style*=\"width: 168px; height: 168px;\"]), ._aa4d ._aams>canvas {",
 	"    filter: invert(0.13) !important;",
@@ -600,7 +615,7 @@
 	"[data-bloks-name][style*=\"background: rgb(250, 250, 250)\"] {",
 	"    background: rgb(39, 39, 39) !important;",
 	"}",
-	"[data-bloks-name][style*=\"background: rgb(219, 219, 219)\"][style*=\"width: 100%\"], [data-bloks-name][style*=\"background: rgb(38, 38, 38)\"][style*=\"width: 100%\"] {",
+	"[data-bloks-name][style*=\"background: rgb(219, 219, 219)\"][style*=\"width: 100%\"], [data-bloks-name][style*=\"background: rgb(38, 38, 38)\"][style*=\"width: 100%\"], [data-bloks-name][style*=\"background: rgb(219, 219, 219)\"][style*=\"height: 1px\"], [data-bloks-name][style*=\"background: rgb(38, 38, 38)\"][style*=\"height: 1px\"] {",
 	"    background: rgb(var(--ig-elevated-separator)) !important;",
 	"}",
 	"[data-bloks-name=\"ig.components.screens.Navbar\"] > [style*=\"background-color: rgb(255, 255, 255)\"] {",
