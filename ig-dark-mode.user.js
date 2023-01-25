@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.7.6
+// @version				1.7.7
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -11,18 +11,41 @@
 // @run-at				document-start
 // ==/UserScript==
 (function() {var css = [
-	"/* Temporary fixes for main page // Delete after IG fixes their own mess */",
-	"._aggc, ._ab6q+._aac6>*>._aao_, ._aa25, ._ab6o:not(._ab6q)+._aac6 {",
+	"/* Temporary fixes for main page // Delete after IG fixes their own mess; Perhaps this is not temporary!? */",
+	"._aggc, ._aj3f, ._ab6o:not(._ab6q)+._aac6 {",
 	"    border-radius: 3px !important;",
+	"    padding-left: 12px !important;",
+	"    padding-right: 12px !important;",
 	"    border-top: 1px solid rgb(var(--ig-separator)) !important;",
 	"    border-left: 1px solid rgb(var(--ig-separator)) !important;",
 	"    border-right: 1px solid rgb(var(--ig-separator)) !important;",
 	"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
 	"}",
-	"section.x78zum5 > .xvbhtw8, ._agh4, ._ab8s, ._ab6q, ._aac6, ._abc0, ._aac4, ._aam1 {",
+	"._aa25 {",
+	"    border-top: 1px solid rgb(var(--ig-separator)) !important;",
+	"    border-left: 1px solid rgb(var(--ig-separator)) !important;",
+	"    border-right: 1px solid rgb(var(--ig-separator)) !important;",
+	"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
+	"}",
+	"._aiao, ._aauo, ._ab6o:not(._ab6q)+._aac6>._aac8 {",
+	"    margin-left: -12px !important;",
+	"    margin-right: -12px !important;",
+	"}",
+	"._aa26 {",
+	"    padding-left: 12px !important;",
+	"    padding-right: 12px !important;",
+	"}",
+	"._aauo ._acay {",
+	"    padding-left: 12px !important;",
+	"}",
+	"._aatc ._aasj {",
+	"    margin-left: -4px !important;",
+	"    margin-right: -4px !important;",
+	"}",
+	"section.x78zum5 > .xvbhtw8, ._agh4, ._abaj>._ab8s, ._ab6q, ._aac6, ._agh3>._abc0, ._aac4, ._aam1 {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	"._aauo, ._aa26, ._ab6o:not(._ab6q)+._aac6 {",
+	"._aauo, ._aa26, ._aj3f {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
 	"}",
 	"/* Define dark mode to get specific scrollbars */",
@@ -196,10 +219,10 @@
 	"._a3wf ._a994 {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	//"/* Stories rectangle (force it for Android user agent) */",
-	//"._aac4 {",
-	//"    background: rgb(var(--ig-primary-background)) !important;",
-	//"}",
+	"/* Stories rectangle (force it for Android user agent) */",
+	"._aac4 {",
+	"    background: rgb(var(--ig-primary-background)) !important;",
+	"}",
 	"/* Circular border for viewed stories + highlights section / More lighter color */",
 	"._aa4d ._aarf>canvas:not([style*=\"width: 42px; height: 42px;\"], [style*=\"width: 54px; height: 54px;\"], [style*=\"width: 66px; height: 66px;\"], [style*=\"width: 91px; height: 91px;\"], [style*=\"width: 168px; height: 168px;\"]), ._aa4d ._aams>canvas {",
 	"    filter: invert(0.13) !important;",
@@ -458,7 +481,7 @@
 	"    box-shadow: rgba(0,0,0,.9) 0 4px 22px !important;",
 	"}",
 	"/* Account mini previews */",
-	"._aap3 {",
+	".x1rj4ezl {",
 	"    box-shadow: 0 0 5px 3px rgba(0, 0, 0, .9), 0 0 0 1px rgb(0, 0, 0) !important;",
 	"}",
 	"/* There are some subtle circle border in acc minipreviews */",
