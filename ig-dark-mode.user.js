@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.7.7
+// @version				1.7.8
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -42,10 +42,10 @@
 	"    margin-left: -4px !important;",
 	"    margin-right: -4px !important;",
 	"}",
-	"section.x78zum5 > .xvbhtw8, ._agh4, ._abaj>._ab8s, ._ab6q, ._aac6, ._agh3>._abc0, ._aac4, ._aam1 {",
+	"section.x78zum5 > .xvbhtw8, ._agh4, ._abaj>._ab8s, ._akek {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	"._aauo, ._aa26, ._aj3f {",
+	"._aa26, ._aac4, ._aggc {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
 	"}",
 	"/* Define dark mode to get specific scrollbars */",
@@ -146,7 +146,7 @@
 	"}",
 	"/* Meta logo visible at Settings page */",
 	"g[clip-path=\"url(#a)\"]>path[fill=\"#262626\"] {",
-	"    fill: #e8e8e8 !important;",
+	"    fill: #fafafa !important;",
 	"}",
 	"/* New UI, the left bottom menu \"More\" */",
 	".xsgn9v4 {",
@@ -182,7 +182,6 @@
 	".x1f91t4q .xvb8j5 {",
 	"    border-right: 1px solid rgb(var(--ig-separator)) !important;",
 	"}",
-	//".xvbhtw8 .x182iqb8.xvbhtw8:not(.x1cy8zhl, .x12v9rci) {",
 	".xvbhtw8 .x182iqb8.xvbhtw8, .xvbhtw8 .x182iqb8.xvbhtw8 > .xvbhtw8 {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
@@ -219,10 +218,6 @@
 	"._a3wf ._a994 {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	"/* Stories rectangle (force it for Android user agent) */",
-	"._aac4 {",
-	"    background: rgb(var(--ig-primary-background)) !important;",
-	"}",
 	"/* Circular border for viewed stories + highlights section / More lighter color */",
 	"._aa4d ._aarf>canvas:not([style*=\"width: 42px; height: 42px;\"], [style*=\"width: 54px; height: 54px;\"], [style*=\"width: 66px; height: 66px;\"], [style*=\"width: 91px; height: 91px;\"], [style*=\"width: 168px; height: 168px;\"]), ._aa4d ._aams>canvas {",
 	"    filter: invert(0.13) !important;",
@@ -243,7 +238,8 @@
 	"/* Added :not(._ab9y._aba8, ._aagx) to avoid changing the colors inside \"Create new post\" small bottom elements + the Instagram logo */",
 	"/* Back button at the top in this page https://instagram.com/?variant=following + https://instagram.com/?variant=past_posts */",
 	"/* Lock symbol, inside acc mini previews, for private accs + \"No photos\" in acc mini preview */",
-	"*:not(._ab9y._aba8, ._aagx)>._ab6-[color=\"#262626\"][fill=\"#262626\"], ._8-yf5[color=\"#262626\"][fill=\"#262626\"], ._aam5>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._ab1a>*>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._aap3 .x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], .x1bhewko>*>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"] {",
+//	"*:not(._ab9y._aba8, ._aagx)>._ab6-[color=\"#262626\"][fill=\"#262626\"], ._8-yf5[color=\"#262626\"][fill=\"#262626\"], ._aam5>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._ab1a>*>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], ._aap3 .x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"], .x1bhewko>*>*>*>*>*>.x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"] {",
+	"*:not(._ab9y._aba8, ._aagx)>._ab6-[color=\"#262626\"][fill=\"#262626\"], ._8-yf5[color=\"#262626\"][fill=\"#262626\"], .x1n2onr6.x1lliihq[color=\"#262626\"][fill=\"#262626\"] {",
 	"    color: #fafafa !important;",
 	"    fill: #fafafa !important;",
 	"}",
@@ -521,7 +517,7 @@
 	".zOJg- {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
 	"}",
-	"/* Much lighter color for numbers used here: instagram.com/directory/profiles/ + instagram.com/directory/hashtags/ */",
+	"/* Much lighter color for numbers used here: instagram.com/directory/profiles/ */",
 	"._7kTyW {",
 	"    color: #f5f5f5 !important;",
 	"}",
