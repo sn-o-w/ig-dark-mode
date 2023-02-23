@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.8.2
+// @version				1.8.3
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -12,8 +12,9 @@
 // ==/UserScript==
 (function() {var css = [
 	"/* Temporary fixes for main page // Delete after IG fixes their own mess; Perhaps this is not temporary!? */",
+	"/* Small changes for \"Suggestions for you\", shown in main feed */",
 	"._aggc, ._aj3f, ._ab6o:not(._ab6q)+._aac6 {",
-	"    border-radius: 3px !important;",
+	"    border-radius: 4px !important;",
 	"    padding-left: 11.5px !important;",
 	"    padding-right: 11.5px !important;",
 	"    border-top: 1px solid rgb(var(--ig-separator)) !important;",
@@ -21,7 +22,12 @@
 	"    border-right: 1px solid rgb(var(--ig-separator)) !important;",
 	"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
 	"}",
+	"._akej ._ackh > * > ._aao_ {",
+	"    margin-left: -11.5px !important;",
+	"    width: 105.17% !important;",
+	"}",
 	"._aa25 {",
+	"    border-radius: 4px !important;",
 	"    border-top: 1px solid rgb(var(--ig-separator)) !important;",
 	"    border-left: 1px solid rgb(var(--ig-separator)) !important;",
 	"    border-right: 1px solid rgb(var(--ig-separator)) !important;",
@@ -45,7 +51,7 @@
 	"    margin-left: -3.5px !important;",
 	"    margin-right: -3.5px !important;",
 	"}",
-	"section.x78zum5 > .xvbhtw8, footer.xvbhtw8, ._agh4, ._abaj>._ab8s, ._akek {",
+	"._aam1, ._aalv, section.x78zum5 > .xvbhtw8, footer.xvbhtw8, ._agh4, ._abaj>._ab8s, ._akek {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	"._aa26, ._aac4, ._aggc {",
@@ -140,7 +146,7 @@
 	"/* .s4Iyt -> Some settings page still uses this... */",
 	"/* It looks like Instagram started to enforce their dark mode on browsers having the dark mode enabled */",
 	"/* ._ab21>*>*>i[style*=\"https://static.cdninstagram.com\"] is used on login page */",
-	"._acum ._aagx>*, .xvbhtw8 ._aagx>*[color=\"rgb(38, 38, 38)\"][fill=\"rgb(38, 38, 38)\"], .sDN5V .s4Iyt, ._ab21>*>*>i[style*=\"https://static.cdninstagram.com\"] {",
+	"._acum ._aagx>*, .xvbhtw8 ._aagx>*[color=\"rgb(38, 38, 38)\"][fill=\"rgb(38, 38, 38)\"], .sDN5V .s4Iyt, ._aa4c ._ab21>*>*>i[style*=\"https://static.cdninstagram.com\"] {",
 	"    filter: invert(1) brightness(1.15) !important;",
 	"}",
 	"/* Some pages still have \"selectable\" Instagram logo :/ */",
@@ -248,9 +254,16 @@
 	"    color: rgb(250, 250, 250) !important;",
 	"    fill: rgb(250, 250, 250) !important;",
 	"}",
-	"/* Fixes for new profile buttons, by default they look ugly currently */",
+	"/* Fixes for the account profile section, by default they look ugly currently */",
+	"/* Small changes for Suggested section + \"No posts yet\" notice */",
 	"._acat._aj1-, section.xs83m0k .xwhw2v2, .x19g8pj0 .xwhw2v2 {",
 	"    color: rgb(var(--ig-primary-text)) !important;",
+	"}",
+	"._ackf._ackh:not(._ab6k, ._aa-x), ._ackf._ackh:not(._ab6k) .xvbhtw8, ._aady {",
+	"    background: rgb(var(--ig-secondary-background)) !important;",
+	"}",
+	"._ab8q {",
+	"    background-color: rgb(var(--ig-primary-background)) !important;",
 	"}",
 	"/* Down chevron icon, used to see suggested accounts within any acc page */",
 	"/* Added :not(._aaqh)>*>*>*> to not interfere with focused post, on entire page */",
@@ -471,7 +484,7 @@
 	"    background-color: rgb(var(--ig-primary-background)) !important;",
 	"}",
 	"/* https://instagram.com/accounts/login/ especially when you are not logged in */",
-	"._ab21 {",
+	"._a994 > * > * >._ab21, ._ab1z >._ab21:not(._ab23) {",
 	"    border: 1px solid rgb(44,44,44) !important;",
 	"}",
 	".UDpcu, .vfoLd {",
@@ -490,7 +503,8 @@
 	".zOJg- {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
 	"}",
-	"/* Much lighter color for numbers used here: instagram.com/directory/profiles/ */",
+	"/* Much lighter color for numbers used here: https://instagram.com/directory/profiles/ */",
+	"/* This page still uses old UI... */",
 	"._7kTyW {",
 	"    color: #f5f5f5 !important;",
 	"}",
