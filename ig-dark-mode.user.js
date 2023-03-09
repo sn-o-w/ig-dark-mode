@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.8.3
+// @version				1.8.4
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -56,6 +56,26 @@
 	"}",
 	"._aa26, ._aac4, ._aggc {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
+	"}",
+	"/* \"Suggestions for you\" -- IG still temporarily experiments these changes */",
+	"._aalf::before {",
+	"    background-image: linear-gradient( to left, rgba(var(--ig-primary-background), 0), rgb(var(--ig-primary-background)) 100% ) !important;",
+	"}",
+	"/* Story section + \"Following\"/\"Past Posts\" notice */",
+	"._ab6o:not(._ab6q)+._aj3f {",
+	"    margin: 0 auto !important;",
+	"    max-width: 472px !important;",
+	"}",
+	"._ab6o._ab6q+._aj3f {",
+	"    margin: 0 auto !important;",
+	"    max-width: 470px !important;",
+	"}",
+	"._akej > div:nth-of-type(2) > .xkhd6sd {",
+	"    margin-left: 80px !important;",
+	"}",
+	"/* \"About this account\" */",
+	".xva5n77 span[data-bloks-name=\"bk.components.Text\"][style*=\"font-weight: 700; font-size: 14px; line-height: 1.625\"] {",
+	"    color: rgb(250, 250, 250) !important;",
 	"}",
 	"/* Define dark mode to get specific scrollbars */",
 	":root {",
@@ -229,10 +249,10 @@
 	"/* Add \"._aa4d\._aa4c>*>*>*>*>*>*>*>*>*>*>*>*:not(.x5qyhuo)\" to not modify within Stories page */",
 	"/* Add a specific rule for dark theme where canvas border look awful within Stories page and needs manual fix */",
 	"._aa4d>*>*>*>*>*>*>*>*>*>*>*>*:not(.x5qyhuo) ._aarf>canvas:not([style*=\"width: 42px; height: 42px;\"], [style*=\"width: 54px; height: 54px;\"], [style*=\"width: 66px; height: 66px;\"], [style*=\"width: 91px; height: 91px;\"], [style*=\"width: 168px; height: 168px;\"]), ._aa4d ._aams>canvas {",
-	"    filter: invert(0.13) !important;",
+	"    filter: invert(0.22) !important;",
 	"}",
 	"._aa4c>*>*>*>*>*>*>*>*>*>*>*>*:not(.x5qyhuo) ._aarf>canvas:not([style*=\"width: 42px; height: 42px;\"], [style*=\"width: 54px; height: 54px;\"], [style*=\"width: 66px; height: 66px;\"], [style*=\"width: 91px; height: 91px;\"], [style*=\"width: 168px; height: 168px;\"]), ._aa4c ._aams>canvas {",
-	"    filter: invert(0.8) !important;",
+	"    filter: invert(0.725) !important;",
 	"}",
 	"._aa4d>*>*>*>*>*>*>*>*>*>*>*>.x5qyhuo ._aarf>canvas[style*=\"width: 64px; height: 64px;\"] {",
 	"    filter: invert(1) brightness(1.088) !important;",
