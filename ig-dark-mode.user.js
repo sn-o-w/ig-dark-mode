@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.8.7
+// @version				1.8.8
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -13,7 +13,7 @@
 (function() {var css = [
 	"/* Fixes for main page */",
 	"/* Small changes for \"Suggestions for you\", shown in main feed */",
-	"._aggc > * > *:not(._aiao, ._aasj) {",
+	"._aggc:not(._aatd) > * > *:not(._aiao, ._aasj) {",
 	"    padding-left: 11.5px !important;",
 	"    padding-right: 11.5px !important;",
 	"}",
@@ -175,7 +175,7 @@
 	"/* .s4Iyt -> Some settings page still uses this... */",
 	"/* It looks like Instagram started to enforce their dark mode on browsers having the dark mode enabled */",
 	"/* ._ab21>*>*>i[style*=\"https://static.cdninstagram.com\"] is used on login page */",
-	"._acum ._aagx>*, .xvbhtw8 ._aagx>*[color=\"rgb(38, 38, 38)\"][fill=\"rgb(38, 38, 38)\"], .sDN5V .s4Iyt, ._aa4c ._ab21>*>*>i[style*=\"https://static.cdninstagram.com\"] {",
+	"._acum ._aagx>*, .xvbhtw8 ._aagx>*[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"], .sDN5V .s4Iyt, ._aa4c ._ab21>*>*>i[style*=\"https://static.cdninstagram.com\"] {",
 	"    filter: invert(1) brightness(1.15) !important;",
 	"}",
 	"/* Some pages still have \"selectable\" Instagram logo :/ */",
@@ -190,8 +190,8 @@
 	"    background-color: #92144d !important;",
 	"}",
 	"/* Meta logo visible at Settings page */",
-	"g[clip-path=\"url(#a)\"]>path[fill=\"rgb(38, 38, 38)\"] {",
-	"    fill: rgb(250, 250, 250) !important;",
+	"g[clip-path=\"url(#a)\"]>path[fill=\"rgb(0, 0, 0)\"] {",
+	"    fill: rgb(245, 245, 245) !important;",
 	"}",
 	"/* New UI, the left bottom menu \"More\" */",
 	".xsgn9v4 {",
@@ -310,12 +310,12 @@
 	"._ab8s {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	"section.xs83m0k a, section.xs83m0k a:visited {",
+	"section.xs83m0k .xl565be>a, section.xs83m0k .xl565be>a:visited {",
 	"    color: rgb(224, 241, 255) !important;",
 	"}",
 	"/* Down chevron icon, used to see suggested accounts within any acc page */",
 	"/* Added :not(._aaqh)>*>*>*> to not interfere with focused post, on entire page */",
-	"*:not(._aaqh)>*>*>*>._ab6-[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"], *:not(._aaqh)>*>*>*>.x1lliihq[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"] {",
+	"*:not(._aaqh)>*>*>*:not(._aagx)>._ab6-[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"], *:not(._aaqh)>*>*>*>.x1lliihq[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"] {",
 	"    color: rgb(255, 255, 255) !important;",
 	"    fill: rgb(255, 255, 255) !important;",
 	"}",
@@ -494,6 +494,9 @@
 	".xb88tzc ._a9--:active {",
 	"    background-color: #363636 !important;",
 	"}",
+	"._abdc a {",
+	"    color: rgb(var(--ig-link)) !important;",
+	"}",
 	"/* General border used around circular profile pics within Instagram + hashtags */",
 	"/* Added \":not(._ac0l, ._ac0h, ._aa64)\" to not modify circle borders within Stories page; Stories page has a dark background, so no need to edit in there! */",
 	"*:not(._ac0l, ._ac0h, ._aa64)>*>._aa8h::after, ._2dbep::after, ._acf-::after, ._aadm::after {",
@@ -625,8 +628,11 @@
 	"    color: #4b6cb4 !important;",
 	"}",
 	"/* The bottom long line for \"Sensitive Content\", above \"See Video\" or \"See reel\" or \"See Photo\" (in both posts and stories) */",
-	"._abqu ._abqt, ._ac0b ._aest {",
+	"._abqu ._abqt {",
 	"    border-top: 1px solid #dbdbdb !important;",
+	"}",
+	"._ac0b .x11mr3az {",
+		"    background-color: #dbdbdb !important;",
 	"}",
 	"/* Some symbols look ugly if they are not color inversed, symbols appearing after you press \"See why\" on a sensitive content */",
 	"/* Sort and filter for https://instagram.com/your_activity/ */",
