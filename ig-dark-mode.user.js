@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.8.9
+// @version				1.9.0
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -62,6 +62,10 @@
 	"}",
 	"._aa26, ._aac4, ._aggc {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
+	"}",
+	"/* Fix for textarea when a post is open in a new tab */",
+	"section.x1yrsyyn .xvbhtw8 {",
+	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	"/* Story section + \"Following\"/\"Past Posts\" notice */",
 	"._ab6o:not(._ab6q)+._aj3f {",
@@ -302,7 +306,7 @@
 	"}",
 	"/* Fixes for the account profile section, by default they look ugly currently */",
 	"/* Small changes for Suggested section + \"No posts yet\" notice */",
-	"._acat._aj1-, section.xs83m0k .xwhw2v2, .x19g8pj0 .xwhw2v2 {",
+	"._acat._aj1-, section.xs83m0k .xwhw2v2, .x19g8pj0 .xwhw2v2, .x13wlyjk.x13wlyjk .x175jnsf {",
 	"    color: rgb(var(--ig-primary-text)) !important;",
 	"}",
 	"._ackf._ackh:not(._ab6k, ._aa-x), ._ackf._ackh:not(._ab6k) .xvbhtw8, ._aady, ._aa_z .x1iyjqo2 {",
