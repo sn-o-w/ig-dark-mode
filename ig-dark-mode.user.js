@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.9.0
+// @version				1.9.1
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -69,11 +69,13 @@
 	"}",
 	"/* Story section + \"Following\"/\"Past Posts\" notice */",
 	"._ab6o:not(._ab6q)+._aj3f {",
-	"    margin: 0 auto !important;",
+	"    margin-left: auto !important;",
+	"    margin-right: auto !important;",
 	"    width: 472px !important;",
 	"}",
 	"._ab6o._ab6q+._aj3f {",
-	"    margin: 0 auto !important;",
+	"    margin-left: auto !important;",
+	"    margin-right: auto !important;",
 	"    width: 470px !important;",
 	"}",
 	"._ab6o._ab6q+._aj3f > ._aac8 {",
@@ -81,6 +83,16 @@
 	"}",
 	"._akej > div:nth-of-type(2) > .xkhd6sd {",
 	"    margin-left: 80px !important;",
+	"}",
+	"/* \"We’ve updated our Terms and Privacy Policy\" notice */",
+	"._a9_9 {",
+	"    margin-left: auto !important;",
+	"    margin-right: auto !important;",
+	"    width: 470px !important;",
+	"}",
+	"/* Comment option rectangle showing 3 dots */",
+	"._a9zh {",
+	"    background-image: linear-gradient(to right, rgba(var(--ig-secondary-background), .8), rgb(var(--ig-secondary-background))) !important;",
 	"}",
 	"/* New dropdown menu */",
 	".x13b9bq5 {",
@@ -504,6 +516,9 @@
 	"}",
 	"._abdc a {",
 	"    color: rgb(var(--ig-link)) !important;",
+	"}",
+	".x1gjpkn9.x175jnsf {",
+	"    color: rgb(var(--ig-primary-text)) !important;",
 	"}",
 	"/* General border used around circular profile pics within Instagram + hashtags */",
 	"/* Added \":not(._ac0l, ._ac0h, ._aa64)\" to not modify circle borders within Stories page; Stories page has a dark background, so no need to edit in there! */",
