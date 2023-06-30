@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.9.3
+// @version				1.9.4
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -14,6 +14,9 @@
 	"/* Fixes for main page */",
 	"/* Small changes for \"Suggestions for you\", shown in main feed */",
 	// IG removed the code after a few hours... :/ //
+	"._aam1 > .xvbhtw8 {",
+	"    background: rgb(var(--ig-secondary-background)) !important;",
+	"}",
 	"._aam1 ._aac6 {",
 	"    border-radius: 4px !important;",
 	"    border-top: 1px solid rgb(var(--ig-separator)) !important;",
@@ -421,16 +424,20 @@
 	"    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 44.54%) !important;",
 	"}",
 	"/* The rectangle containing IG account(s), for people selected for sharing a post with AND/OR to start a new message with (similar to the dark theme of Instagram mobile app) */",
-	"._aa2s .xk5f4mz {",
+	"/* New Inbox looks ugly :/ */",
+	"._aa2s .xk5f4mz, .x2lwn1j.x1a02dak .xk5f4mz {",
 	"    background: linear-gradient(to right, #0094f6, #28c4f5) !important;",
 	"}",
-	"._aa2s .x1tu34mt {",
+	"._aa2s .x1tu34mt, .x2lwn1j.x1a02dak .x1tu34mt {",
 	"    background: linear-gradient(to right, #ef4957, #d1076a) !important;",
 	"}",
-	"._aa2s .x173jzuc {",
+	"._aa2s .x173jzuc, .x2lwn1j.x1a02dak .x173jzuc {",
 	"    color: #fff !important;",
 	"}",
-	"._aa2s ._abm0 > .x1n2onr6[color=\"rgb(0, 149, 246)\"] {",
+	"._aa2s .x173jzuc:hover, .x2lwn1j.x1a02dak .x173jzuc:hover {",
+	"    color: #bcbcbc !important;",
+	"}",
+	"._aa2s ._abm0 > .x1n2onr6[color=\"rgb(0, 149, 246)\"], .x2lwn1j.x1a02dak ._abm0 > .x1n2onr6[color=\"rgb(0, 149, 246)\"] {",
 	"    color: rgb(255, 255, 255) !important;",
 	"}",
 	"/* Make photo tags more transparent alike Instagram app + add a fix inside stories for text tagged color mentioning a person */",
