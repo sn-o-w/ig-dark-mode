@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.9.4
+// @version				1.9.5
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -14,7 +14,10 @@
 	"/* Fixes for main page */",
 	"/* Small changes for \"Suggestions for you\", shown in main feed */",
 	// IG removed the code after a few hours... :/ //
-	"._aam1 > .xvbhtw8 {",
+	"._aak9 {",
+	"    padding-left: 79px !important;",
+	"}",
+	"main.x78zum5 > * > * > * > .xvbhtw8.x1mcj5oc, main.x182iqb8 > * > .xvbhtw8.x1p5oq8j, main.x182iqb8 > * > *> .xvbhtw8.xlaft8j {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	"._aam1 ._aac6 {",
@@ -143,6 +146,7 @@
 	"    --blue-2: #244A67 !important;", //modified
 	"    --challenge-link: 219,219,219 !important;",
 	"    --docpen-lightgrey: 65,65,65 !important;", //modified
+	"    --feed-width-wide-story: 472px !important;", //modified
 	"    --ig-banner-background: 28,28,28 !important;", //modified
 	"    --ig-elevated-background: 28,28,28 !important;", //modified
 	"    --ig-elevated-highlight-background: #3c3c3c !important;", //modified
