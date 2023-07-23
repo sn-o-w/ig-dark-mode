@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.9.5
+// @version				1.9.6
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -17,7 +17,7 @@
 	"._aak9 {",
 	"    padding-left: 79px !important;",
 	"}",
-	"main.x78zum5 > * > * > * > .xvbhtw8.x1mcj5oc, main.x182iqb8 > * > .xvbhtw8.x1p5oq8j, main.x182iqb8 > * > *> .xvbhtw8.xlaft8j {",
+	"main.x78zum5 .xvbhtw8.x1mcj5oc, main.x182iqb8 > * > .xvbhtw8.x1p5oq8j, main.x182iqb8 > * > *> .xvbhtw8.xlaft8j {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	"._aam1 ._aac6 {",
@@ -28,7 +28,6 @@
 	"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
 	"    margin-left: auto !important;",
 	"    margin-right: auto !important;",
-	//"    margin-bottom: auto !important;",
 	"    width: 472px !important;",
 	"}",
 	"._aam1 ._aac6 ._acay, ._aam1 ._aac6 .xcbkimw {",
@@ -62,6 +61,10 @@
 	"    padding-bottom: 11.5px !important;",
 	"}",
 	"footer.xvbhtw8, ._agh4, section.x78zum5 > .xvbhtw8 {",
+	"    background: rgb(var(--ig-secondary-background)) !important;",
+	"}",
+	"/* Independent post */",
+	".x4h1yfo > .xvbhtw8, .x4h1yfo textarea.xvbhtw8, .x4h1yfo ._aaod ._aiam, .x4h1yfo ._aaod ._aidk {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	"/*\"Following\"/\"Past Posts\" notice */",
