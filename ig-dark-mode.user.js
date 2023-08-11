@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.9.6
+// @version				1.9.7
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -66,10 +66,6 @@
 	"/* Independent post */",
 	".x4h1yfo > .xvbhtw8, .x4h1yfo textarea.xvbhtw8, .x4h1yfo ._aaod ._aiam, .x4h1yfo ._aaod ._aidk {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
-	"}",
-	"/*\"Following\"/\"Past Posts\" notice */",
-	"._akej > div:nth-of-type(2) > .xkhd6sd {",
-	"    margin-left: 76px !important;",
 	"}",
 	"/* \"We’ve updated our Terms and Privacy Policy\" notice */",
 	"._a9_9 {",
@@ -272,14 +268,14 @@
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	"/* Circular border for viewed stories + highlights section / More lighter color */",
-	"/* Add \"._aa4d\._aa4c .xat3117>*>*>*:not(.x5qyhuo)\" to not modify within Stories page */",
-	"._aa4c .xat3117>*>*>*:not(.x5qyhuo) canvas[style*=\"width: 64px\"][style*=\"height: 64px\"], ._aa4c [style*=\"width: 40px\"][style*=\"height: 40px\"], ._aa4c [style*=\"width: 52px\"][style*=\"height: 52px\"], ._aa4c canvas[style*=\"width: 87px\"][style*=\"height: 87px\"], ._aa4c ._aarf>canvas[style*=\"width: 166px\"][style*=\"height: 166px\"] {",
+	"/* Add \"._aa4d\._aa4c .xxzkxad>*>*>*:not(.x5qyhuo)\" to not modify within Stories page */",
+	"._aa4c .xxzkxad>*>*>*:not(.x5qyhuo) canvas[style*=\"width: 64px\"][style*=\"height: 64px\"], ._aa4c [style*=\"width: 40px\"][style*=\"height: 40px\"], ._aa4c [style*=\"width: 52px\"][style*=\"height: 52px\"], ._aa4c canvas[style*=\"width: 87px\"][style*=\"height: 87px\"], ._aa4c ._aarf>canvas[style*=\"width: 166px\"][style*=\"height: 166px\"] {",
 	"    filter: brightness(0.395) !important;",
 	"}",
-	"._aa4d .xat3117>*>*>*:not(.x5qyhuo) canvas[style*=\"width: 64px\"][style*=\"height: 64px\"], ._aa4d [style*=\"width: 40px\"][style*=\"height: 40px\"], ._aa4d [style*=\"width: 52px\"][style*=\"height: 52px\"], ._aa4d canvas[style*=\"width: 87px\"][style*=\"height: 87px\"], ._aa4d ._aarf>canvas[style*=\"width: 166px\"][style*=\"height: 166px\"] {",
+	"._aa4d .xxzkxad>*>*>*:not(.x5qyhuo) canvas[style*=\"width: 64px\"][style*=\"height: 64px\"], ._aa4d [style*=\"width: 40px\"][style*=\"height: 40px\"], ._aa4d [style*=\"width: 52px\"][style*=\"height: 52px\"], ._aa4d canvas[style*=\"width: 87px\"][style*=\"height: 87px\"], ._aa4d ._aarf>canvas[style*=\"width: 166px\"][style*=\"height: 166px\"] {",
 	"    filter: brightness(1.59) !important;",
 	"}",
-	"._aa4d .xat3117>*>*>.x5qyhuo ._aarf>canvas[style*=\"width: 64px\"][style*=\"height: 64px\"] {",
+	"._aa4d .xxzkxad>*>*>.x5qyhuo ._aarf>canvas[style*=\"width: 64px\"][style*=\"height: 64px\"] {",
 	"    filter: brightness(4.05) !important;",
 	"}",
 	"/* Fixes for post in focus when extremely zoomed in */",
@@ -321,6 +317,10 @@
 	"*:not(._aaqh)>*>*>*:not(._aagx)>._ab6-[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"], *:not(._aaqh)>*>*>*>.x1lliihq[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"] {",
 	"    color: rgb(255, 255, 255) !important;",
 	"    fill: rgb(255, 255, 255) !important;",
+	"}",
+	"._ab6-[color=\"rgb(115, 115, 115)\"][fill=\"rgb(115, 115, 115)\"] {",
+	"    color: rgb(168, 168, 168) !important;",
+	"    fill: rgb(168255, 168, 168) !important;",
 	"}",
 	"/* \"Create new post\" enhacements for filters slider(s) */",
 	".x131esax ._acao>*>._ab6-[color=\"rgb(245, 245, 245)\"][fill=\"rgb(245, 245, 245)\"] {",
@@ -572,16 +572,16 @@
 	"}",
 	"/* Miscellaneous changes */",
 	"/* Added ._actr for here https://instagram.com/accounts/remove/request/temporary/ */",
-	"/* \"._a9-z:only-child>*>textarea\" => Fix for textarea in embedding public posts */",
 	"input, select, textarea {",
 	"    color: #e3e1de !important;",
 	"}",
-	"._aajg>select {",
+	"._actr > select, select.x1ypdohk, ._a9-z:only-child>*>textarea {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	"._actr>select, ._a9-z:only-child>*>textarea {",
-	"    background-color: rgb(var(--ig-primary-background)) !important;",
-	"}",
+	// \"._a9-z:only-child>*>textarea\" => Fix for textarea in embedding public posts --- NOT USED ANYNMORE?!
+	//"._a9-z:only-child>*>textarea {",
+	//"    background-color: rgb(var(--ig-primary-background)) !important;",
+	//"}",
 	"/* Set white background for :checked to look alike the selected circular things inside the mobile dark theme of Instagram */",
 	"._ac7j:checked, .z79H6:checked {",
 	"    background: rgb(255,255,255) !important;",
