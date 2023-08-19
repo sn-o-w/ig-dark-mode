@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.9.7
+// @version				1.9.8
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -13,14 +13,20 @@
 (function() {var css = [
 	"/* Fixes for main page */",
 	"/* Small changes for \"Suggestions for you\", shown in main feed */",
-	// IG removed the code after a few hours... :/ //
-	"._aak9 {",
-	"    padding-left: 79px !important;",
+	".xseo6mj {",
+	"    margin-left: 79px !important;",
+	"    margin-right: -79px !important;",
+	"}",
+	".x11fxgd9 {",
+	"    margin-left: 1px !important;",
+	"}",
+	"div[style=\"max-width: 630px; width: 100%;\"] {",
+	"    max-width: var(--feed-width-wide-story) !important;",
 	"}",
 	"main.x78zum5 .xvbhtw8.x1mcj5oc, main.x182iqb8 > * > .xvbhtw8.x1p5oq8j, main.x182iqb8 > * > *> .xvbhtw8.xlaft8j {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	"._aam1 ._aac6 {",
+	"._aj3f {",
 	"    border-radius: 4px !important;",
 	"    border-top: 1px solid rgb(var(--ig-separator)) !important;",
 	"    border-left: 1px solid rgb(var(--ig-separator)) !important;",
@@ -30,14 +36,10 @@
 	"    margin-right: auto !important;",
 	"    width: 472px !important;",
 	"}",
-	"._aam1 ._aac6 ._acay, ._aam1 ._aac6 .xcbkimw {",
+	"._aj3f ._acay, ._aj3f .xcbkimw {",
 	"    padding-left: 3.5px !important;",
 	"}",
-	"._aam1 ._aggc {",
-	"    border-bottom: 1px solid transparent !important;",
-	"    padding-bottom: 0 !important;",
-	"}",
-	"._aam1 *._aggc > .x9f619, ._aa25 {",
+	".xnc8uc2, .x1egiwwb {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
 	"    border-radius: 4px !important;",
 	"    border-top: 1px solid rgb(var(--ig-separator)) !important;",
@@ -46,19 +48,14 @@
 	"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
 	"}",
 	"article > .x11aubdm > .xsag5q8, .xw7yly9 .x1hq5gj4 .x1e558r4 {",
-	"    margin-top: 11.5px !important;",
-	"}",
-	"article > .x11aubdm > .x1lliihq {",
-	"    margin-bottom: -3px !important;",
-	"}",
-	"._aam1 ._aggc ._aasj, ._aa26 {",
+	"    padding-top: 11.5px !important;",
 	"    padding-left: 10px !important;",
 	"    padding-right: 10px !important;",
 	"}",
-	"._aam1 ._aggc ._ae3w {",
-	"    padding-left: 11.5px !important;",
-	"    padding-right: 11.5px !important;",
-	"    padding-bottom: 11.5px !important;",
+	"article > .x11aubdm > .x1lliihq {",
+	"    margin-bottom: -3px !important;",
+	"    padding-left: 10px !important;",
+	"    padding-right: 10px !important;",
 	"}",
 	"footer.xvbhtw8, ._agh4, section.x78zum5 > .xvbhtw8 {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
@@ -145,7 +142,7 @@
 	"    --blue-2: #244A67 !important;", //modified
 	"    --challenge-link: 219,219,219 !important;",
 	"    --docpen-lightgrey: 65,65,65 !important;", //modified
-	"    --feed-width-wide-story: 472px !important;", //modified
+	"    --feed-width-wide-story: 476px !important;", //modified
 	"    --ig-banner-background: 28,28,28 !important;", //modified
 	"    --ig-elevated-background: 28,28,28 !important;", //modified
 	"    --ig-elevated-highlight-background: #3c3c3c !important;", //modified
@@ -578,7 +575,8 @@
 	"._actr > select, select.x1ypdohk, ._a9-z:only-child>*>textarea {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	// \"._a9-z:only-child>*>textarea\" => Fix for textarea in embedding public posts --- NOT USED ANYNMORE?!
+	// \"._a9-z:only-child>*>textarea\" => Fix for textarea in embedding public posts */",
+	// NO USED ANYNMORE?!
 	//"._a9-z:only-child>*>textarea {",
 	//"    background-color: rgb(var(--ig-primary-background)) !important;",
 	//"}",
