@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				1.9.8
+// @version				2.0.0
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -13,7 +13,7 @@
 (function() {var css = [
 	"/* Fixes for main page */",
 	"/* Small changes for \"Suggestions for you\", shown in main feed */",
-	".xseo6mj {",
+	".x6bx242 > .xseo6mj {",
 	"    margin-left: 79px !important;",
 	"    margin-right: -79px !important;",
 	"}",
@@ -54,6 +54,15 @@
 	"}",
 	"article > .x11aubdm > .x1lliihq {",
 	"    margin-bottom: -3px !important;",
+	"    padding-left: 10px !important;",
+	"    padding-right: 10px !important;",
+	"}",
+	"*:not(article) > .xnc8uc2:not(.xvbhtw8) > div > div:nth-child(1) {",
+	"    padding-top: 11.5px !important;",
+	"    padding-left: 10px !important;",
+	"    padding-right: 10px !important;",
+	"}",
+	"*:not(article) > .xnc8uc2:not(.xvbhtw8) ._acay {",
 	"    padding-left: 10px !important;",
 	"    padding-right: 10px !important;",
 	"}",
@@ -164,6 +173,7 @@
 	"    --post-separator: 58,58,58 !important;", //modified
 	"    --tos-box-shadow: 255,255,255 !important;",
 	"    --web-always-black: 0,0,0 !important;",
+	"    --wbloks-primary-text: rgb(250, 250, 250) !important;", //modified
 	"    --wbloks-separator: rgb(94, 94, 94) !important;", //modified
 	"}",
 	"",
@@ -297,6 +307,9 @@
 	"._acat._aj1-, section.xs83m0k .xwhw2v2, .x19g8pj0 .xwhw2v2, .x13wlyjk.x13wlyjk .x175jnsf {",
 	"    color: rgb(var(--ig-primary-text)) !important;",
 	"}",
+	"._aa-x .xvbhtw8, ._alvo .xvbhtw8 {",
+	"    background-color: rgb(var(--ig-secondary-background)) !important;",
+	"}",
 	"._ackf._ackg:not(._ab6k, ._aa-x), ._ackf._ackg:not(._ab6k) .xvbhtw8, ._aady, ._aa_z .x1iyjqo2 {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
@@ -350,13 +363,13 @@
 	"/* Lighter loading circle (some elements that are not really the loading circle have no [style], so add [style]) */",
 	"/* \".x5qyhuo\" is a class used for Stories page + \"._acas\" is the blue profile button (Follow) - add it to not invert loading circle in there + make color more lighter for these two cases */",
 	"/* \"._acat._aj1-\" used when Follow button is in Requested state, make loading circle a little darker + \".xeuoslp\" is the animation for pending loading elements, at least used within Reels page */",
-	"*:not(.x5qyhuo, ._acas) > [data-visualcompletion=\"loading-state\"][style]:not(.xeuoslp) {",
+	"*:not(.x5qyhuo, ._acas, ._acat, .x1tu34mt) > [data-visualcompletion=\"loading-state\"][style]:not(.xeuoslp), ._aa4c ._acat > [data-visualcompletion=\"loading-state\"][style]:not(.xeuoslp) {",
 	"    filter: invert(1) brightness(1.25) !important;",
 	"}",
 	".x5qyhuo > [data-visualcompletion=\"loading-state\"][style], ._acas > [data-visualcompletion=\"loading-state\"][style] {",
 	"    filter: brightness(1.25) !important;",
 	"}",
-	"._acat._aj1- > [data-visualcompletion=\"loading-state\"][style] {",
+	"._acat._aj1-:not(._acat) > [data-visualcompletion=\"loading-state\"][style] {",
 	"    filter: brightness(0.75) !important;",
 	"}",
 	"/* Private Policy update notice */",
@@ -673,7 +686,7 @@
 	".xrmvjzc {",
 	"    border-bottom-color: rgb(var(--ig-elevated-separator)) !important;",
 	"}",
-	"[data-bloks-name][style*=\"background: rgb(239, 239, 239)\"] {",
+	"[data-bloks-name][style*=\"background: rgb(239, 239, 239)\"], [data-bloks-name][style*=\"background: rgb(38, 38, 38)\"] {",
 	"    background: rgb(var(--post-separator)) !important;",
 	"}",
 	"[data-bloks-name][style*=\"background: rgb(250, 250, 250)\"] {",
