@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				2.0.0
+// @version				2.0.2
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -26,7 +26,8 @@
 	"main.x78zum5 .xvbhtw8.x1mcj5oc, main.x182iqb8 > * > .xvbhtw8.x1p5oq8j, main.x182iqb8 > * > *> .xvbhtw8.xlaft8j {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	"._aj3f {",
+	".xmnaoh6 > * > * {",
+	"    background: rgb(var(--ig-primary-background)) !important;",
 	"    border-radius: 4px !important;",
 	"    border-top: 1px solid rgb(var(--ig-separator)) !important;",
 	"    border-left: 1px solid rgb(var(--ig-separator)) !important;",
@@ -34,7 +35,21 @@
 	"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
 	"    margin-left: auto !important;",
 	"    margin-right: auto !important;",
+	"}",
+	".xmnaoh6 > * > ._ajdu {",
 	"    width: 472px !important;",
+	"}",
+	".xmnaoh6 > * > *:not(._ajdu) {",
+	"    padding-left: 7px !important;",
+	"    padding-top: 8px !important;",
+	"    padding-bottom: 8px !important;",
+	"    width: 464px !important;",
+	"}",
+	".xmnaoh6 > .xwib8y2 {",
+	"    padding-bottom: 0px !important;",
+	"}",
+	".xmnaoh6 > .x1y1aw1k {",
+	"    padding-top: 0px !important;",
 	"}",
 	"._aj3f ._acay, ._aj3f .xcbkimw {",
 	"    padding-left: 3.5px !important;",
@@ -57,7 +72,7 @@
 	"    padding-left: 10px !important;",
 	"    padding-right: 10px !important;",
 	"}",
-	"*:not(article) > .xnc8uc2:not(.xvbhtw8) > div > div:nth-child(1) {",
+	"*:not(article) > .xnc8uc2:not(.xvbhtw8) > div > div:nth-child(1):not(.wbloks_56) {",
 	"    padding-top: 11.5px !important;",
 	"    padding-left: 10px !important;",
 	"    padding-right: 10px !important;",
@@ -90,6 +105,21 @@
 	".x2lwn1j *:not(._aak0)>.xnz67gz:not([style=\"width: 56px; height: 56px;\"], .x5n08af) {",
 	"    background-color: rgb(var(--ig-primary-background)) !important;",
 	"}",
+	"/* \"Threads\" */",
+	"[data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: linear-gradient(90deg, rgba(0, 0, 0, 0.05), rgb(0, 0, 0))\"] {",
+	"    background: linear-gradient(90deg, rgba(28, 28, 28, 0.05), rgb(28, 28, 28)) !important;",
+	"}",
+	"[data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.05))\"] {",
+	"    background: linear-gradient(90deg, rgb(28, 28, 28), rgba(28, 28, 28, 0.05)) !important;",
+	"}",
+	"*:not(article) > .xnc8uc2:not(.xvbhtw8) > div > div[class*=\"wbloks_\"]:nth-child(1) {",
+	"    padding-top: 10px !important;",
+	"    padding-left: 5px !important;",
+	"    margin-bottom: -11px !important;",
+	"}",
+	"*:not(article) > .xnc8uc2:not(.xvbhtw8) > div > div[class*=\"wbloks_\"]:nth-child(1) > div[class*=\"wbloks_\"] {",
+	"    padding-right: 14px !important;",
+	"}",
 	"/* Define dark mode to get specific scrollbars */",
 	":root {",
 	"    color-scheme: dark !important;",
@@ -121,7 +151,7 @@
 	".x1pi30zi>*>*>*[stroke=\"#000\"] {",
 	"    stroke: #fff !important;",
 	"}",
-	".x1pi30zi>*>*>*[fill=\"#000\"] {",
+	".x1pi30zi>*>*>*[fill=\"#000\"], .x19hqcy {",
 	"    fill: #fff !important;",
 	"}",
 	"/* Elements based off of https://instagram.com/?theme=dark */",
@@ -148,6 +178,7 @@
 	"    --a97: 50,50,50 !important;", //modified
 	"    --d20: 250,250,250 !important;",
 	"",
+	"    --barcelona-logo: 243,245,247 !important;",
 	"    --blue-2: #244A67 !important;", //modified
 	"    --challenge-link: 219,219,219 !important;",
 	"    --docpen-lightgrey: 65,65,65 !important;", //modified
@@ -160,6 +191,7 @@
 	"    --ig-highlight-background: 83,83,83 !important;", //modified
 	"    --ig-link: 86,183,249 !important;", //modified
 	"    --ig-primary-background: 28,28,28 !important;",
+	"    --ig-primary-icon: 245, 245, 245 !important;",
 	"    --ig-primary-text: 250,250,250 !important;",
 	"    --ig-secondary-background: 10,10,10 !important;", //modified
 	"    --ig-secondary-button: 250,250,250 !important;",
@@ -168,8 +200,12 @@
 	"    --ig-secondary-text: 160,160,160 !important;", //modified
 	"    --ig-separator: 94,94,94 !important;", //modified
 	"    --ig-stroke: 94,94,94 !important;", //modified
+	"    --ig-stroke-prism: 15,20,25 !important;",
 	"    --ig-temporary-highlight: 0,149,246 !important;",
+	"    --ig-tertiary-icon: 115,115,115 !important;", //modified
 	"    --ig-tertiary-text: 130,130,130 !important;", //modified
+	"    --ig-toggle-background-off-prism: 50,53,57 !important;",
+	"    --ig-toggle-background-on-prism: 248,249,249 !important;",
 	"    --post-separator: 58,58,58 !important;", //modified
 	"    --tos-box-shadow: 255,255,255 !important;",
 	"    --web-always-black: 0,0,0 !important;",
@@ -182,7 +218,7 @@
 	"/* .s4Iyt -> Some settings page still uses this... */",
 	"/* It looks like Instagram started to enforce their dark mode on browsers having the dark mode enabled */",
 	"/* ._ab21>*>*>i[style*=\"https://static.cdninstagram.com\"] is used on login page */",
-	"._acum ._aagx>*, .xvbhtw8 ._aagx>*[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"], .sDN5V .s4Iyt, ._aa4c ._ab21>*>*>i[style*=\"https://static.cdninstagram.com\"] {",
+	"html._aa4d ._acum ._aagx>*, html._aa4d .xvbhtw8 ._aagx>*[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"], html._aa4d .sDN5V .s4Iyt, ._aa4c ._ab21>*>*>i[style*=\"https://static.cdninstagram.com\"] {",
 	"    filter: invert(1) brightness(1.15) !important;",
 	"}",
 	"/* Some pages still have \"selectable\" Instagram logo :/ */",
@@ -310,7 +346,7 @@
 	"._aa-x .xvbhtw8, ._alvo .xvbhtw8 {",
 	"    background-color: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	"._ackf._ackg:not(._ab6k, ._aa-x), ._ackf._ackg:not(._ab6k) .xvbhtw8, ._aady, ._aa_z .x1iyjqo2 {",
+	"._ackf._ackg:not(._ab6k, ._aa-x), ._ackf._ackg:not(._ab6k) .xvbhtw8, ._aady, ._aa_y .x1iyjqo2 {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	"._ab8q {",
@@ -324,7 +360,7 @@
 	"}",
 	"/* Down chevron icon, used to see suggested accounts within any acc page */",
 	"/* Added :not(._aaqh)>*>*>*> to not interfere with focused post, on entire page */",
-	"*:not(._aaqh)>*>*>*:not(._aagx)>._ab6-[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"], *:not(._aaqh)>*>*>*>.x1lliihq[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"] {",
+	"*:not(._aaqh)>*>*>*:not(._aagx)>._ab6-[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"], *:not(._aaqh)>*>*>*:not(._aagx)>.x1lliihq[color=\"rgb(0, 0, 0)\"][fill=\"rgb(0, 0, 0)\"] {",
 	"    color: rgb(255, 255, 255) !important;",
 	"    fill: rgb(255, 255, 255) !important;",
 	"}",
@@ -481,6 +517,10 @@
 	".v2bgO {",
 	"    background-color: rgb(var(--ig-primary-background)) !important;",
 	"}",
+	"/* https://instagram.com/accounts/edit/ */",
+	".xzy4u6w > .xvbhtw8 {",
+	"    background-color: rgb(var(--ig-secondary-background)) !important;",
+	"}",
 	"/* General selector */",
 	"/* \"._abn_\" used within search results */",
 	"/* *:not(.xivu535)>*>*>*>.x1l895ks used for https://instagram.com/accounts/activity/ */",
@@ -631,7 +671,8 @@
 	"/* https://instagram.com/accounts/password/reset/ */",
 	"/* https://instagram.com/accounts/professional_account_settings/ */",
 	"/* Star symbol, used within new following menu of any acc */",
-	"._9-z-, .glyphsSpriteCamera__outline__24__grey_9, ._9zlg, ._9zli, ._9zlh, .coreSpriteKeyhole, ._9zkj, ._9_1o, ._9-_z, ._9--3, ._9-_-, ._9--q, ._9-1a, .glyphsSpriteSearch__outline__24__grey_9, ._9_0y, ._9-ze {",
+	"/* Symbol for support notification, showing up in Notifications */",
+	"._9-z-, .glyphsSpriteCamera__outline__24__grey_9, ._9zlg, ._9zli, ._9zlh, .coreSpriteKeyhole, ._9zkj, ._9_1o, ._9-_z, ._9--3, ._9-_-, ._9--q, ._9-1a, .glyphsSpriteSearch__outline__24__grey_9, ._9_0y, ._9-ze, a > .xz74otr:not(.x10l6tqk) {",
 	"    filter: invert(1) !important;",
 	"}",
 	"/* Long lines in between accounts + color text for accounts, used here: https://instagram.com/accounts/login/ */",
@@ -659,7 +700,7 @@
 	"/* Sort and filter for https://instagram.com/your_activity/ */",
 	"/* Stuff for Help section, for instance here: https://instagram.com/settings/help/ + other Settings pages */",
 	"/* Small fix for \"About this account\" */",
-	"span[data-bloks-name=\"bk.components.Text\"][style*=\"line-height: 1.625\"]:not([style*=\"color:\"]), span[data-bloks-name=\"bk.components.Text\"][style*=\"line-height: 1.3\"]:not([style*=\"color:\"]), span[data-bloks-name=\"bk.components.TextSpan\"][style*=\"color: rgb(0, 0, 0)\"], [data-bloks-name=\"bk.components.TextSpan\"][style*=\"color: rgb(38, 38, 38)\"], [data-bloks-name=\"bk.components.Text\"][style*=\"color: rgb(38, 38, 38)\"] {",
+	"span[data-bloks-name=\"bk.components.Text\"][style*=\"line-height: 1.3\"][style*=\"color: rgb(0, 0, 0)\"], span[data-bloks-name=\"bk.components.Text\"][style*=\"line-height: 1.625\"]:not([style*=\"color:\"]), span[data-bloks-name=\"bk.components.Text\"][style*=\"line-height: 1.3\"]:not([style*=\"color:\"]), span[data-bloks-name=\"bk.components.TextSpan\"][style*=\"color: rgb(0, 0, 0)\"], [data-bloks-name=\"bk.components.TextSpan\"][style*=\"color: rgb(38, 38, 38)\"], [data-bloks-name=\"bk.components.Text\"][style*=\"color: rgb(38, 38, 38)\"] {",
 	"    color: rgb(250, 250, 250) !important;",
 	"}",
 	"[data-bloks-name][style*=\"border: 1px solid rgb(38, 38, 38)\"], [data-bloks-name][style*=\"border: 1px solid rgb(219, 219, 219)\"] {",
@@ -674,7 +715,7 @@
 	"[data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: rgb(255, 255, 255)\"][style*=\"padding: 8px 12px\"] > * > [data-bloks-name=\"bk.components.TextSpan\"][style*=\"color: rgb(0, 0, 0)\"], [data-bloks-name=\"bk.components.TextSpan\"][style*=\"color: rgb(0, 53, 105)\"], [data-bloks-name=\"bk.components.TextSpan\"][style*=\"color: rgb(0, 55, 107)\"], [data-bloks-name=\"bk.components.Text\"][style*=\"color: rgb(223, 239, 255)\"], [data-bloks-name=\"bk.components.Text\"][style*=\"color: rgb(0, 53, 105)\"], [data-bloks-name=\"bk.components.TextSpan\"][style*=\"color: rgb(224, 241, 255)\"] {",
 	"    color: rgb(0, 149, 246) !important;",
 	"}",
-	"[data-bloks-name][style*=\"background: rgb(0, 0, 0)\"], [data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: rgb(255, 255, 255)\"]:not([style*=\"padding: 8px 12px\"], [style*=\"border-radius: 10.5px\"]) {",
+	"[data-bloks-name][style*=\"background: rgb(0, 0, 0)\"], [data-bloks-name=\"bk.components.Flexbox\"][style*=\"background: rgb(255, 255, 255)\"]:not([style*=\"padding: 8px 12px\"], [style*=\"border-radius: 10.5px\"]), [data-bloks-name=\"bk.components.Collection\"][style*=\"background-color: rgb(0, 0, 0)\"][style*=\"height: 214px\"] {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
 	"}",
 	"[data-bloks-name][style*=\"background: rgb(38, 38, 38)\"][style*=\"width: 21px; height: 21px\"]:not([data-bloks-name=\"bk.components.TextSpan\"]), [data-bloks-name][style*=\"background: rgb(38, 38, 38)\"][style*=\"width: 8px; height: 8px\"]:not([style*=\"background: rgb(255, 255, 255)\"], [data-bloks-name=\"bk.components.TextSpan\"]), [data-bloks-name][style*=\"background: rgb(255, 255, 255)\"][style*=\"width: 21px; height: 21px\"], [data-bloks-name][style*=\"background: rgb(219, 219, 219)\"][style*=\"width: 24px; height: 24px\"] ~ [data-bloks-name][style*=\"background: rgb(255, 255, 255)\"][style*=\"width: 8px; height: 8px\"] {",
