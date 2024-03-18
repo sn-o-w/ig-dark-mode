@@ -3,7 +3,7 @@
 // @namespace			https://github.com/sn-o-w/ig-dark-mode
 // @description		Dark mode implementation for Instagram.
 // @author				Snow
-// @version				2.0.2
+// @version				2.0.4
 // @match					*://www.instagram.com/*
 // @exclude-match *://www.instagram.com/*?theme=*
 // @updateURL			https://raw.githack.com/sn-o-w/ig-dark-mode/master/ig-dark-mode.user.js
@@ -18,7 +18,8 @@
 	"    margin-right: -79px !important;",
 	"}",
 	".x11fxgd9 {",
-	"    margin-left: 1px !important;",
+	"    margin-left: 3px !important;",
+	"    margin-right: 1px !important;",
 	"}",
 	"div[style=\"max-width: 630px; width: 100%;\"] {",
 	"    max-width: var(--feed-width-wide-story) !important;",
@@ -26,24 +27,20 @@
 	"main.x78zum5 .xvbhtw8.x1mcj5oc, main.x182iqb8 > * > .xvbhtw8.x1p5oq8j, main.x182iqb8 > * > *> .xvbhtw8.xlaft8j {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
-	".xmnaoh6 > * > * {",
+	".xmnaoh6 > * {",
 	"    background: rgb(var(--ig-primary-background)) !important;",
 	"    border-radius: 4px !important;",
 	"    border-top: 1px solid rgb(var(--ig-separator)) !important;",
 	"    border-left: 1px solid rgb(var(--ig-separator)) !important;",
 	"    border-right: 1px solid rgb(var(--ig-separator)) !important;",
 	"    border-bottom: 1px solid rgb(var(--ig-separator)) !important;",
-	"    margin-left: auto !important;",
-	"    margin-right: auto !important;",
-	"}",
-	".xmnaoh6 > * > ._ajdu {",
-	"    width: 472px !important;",
+	"    margin-left: 3px !important;",
+	"    margin-right: 1px !important;",
 	"}",
 	".xmnaoh6 > * > *:not(._ajdu) {",
 	"    padding-left: 7px !important;",
 	"    padding-top: 8px !important;",
 	"    padding-bottom: 8px !important;",
-	"    width: 464px !important;",
 	"}",
 	".xmnaoh6 > .xwib8y2 {",
 	"    padding-bottom: 0px !important;",
@@ -85,7 +82,11 @@
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	"/* Independent post */",
-	".x4h1yfo > .xvbhtw8, .x4h1yfo textarea.xvbhtw8, .x4h1yfo ._aaod ._aiam, .x4h1yfo ._aaod ._aidk {",
+	".x4h1yfo > .xvbhtw8, .x4h1yfo .xktsk01 .xvbhtw8, .x4h1yfo ._aaod ._aiam, .x4h1yfo ._aaod ._aidk {",
+	"    background: rgb(var(--ig-secondary-background)) !important;",
+	"}",
+	"/* \"This account is private\" + \"Suggested for you\" */",
+	".x58vhm7 .x1iyjqo2.xvbhtw8, .x58vhm7 ._acaz .xvbhtw8 {",
 	"    background: rgb(var(--ig-secondary-background)) !important;",
 	"}",
 	"/* \"We’ve updated our Terms and Privacy Policy\" notice */",
@@ -96,7 +97,10 @@
 	"}",
 	"/* New dropdown menu */",
 	".x13b9bq5 {",
-	"    filter: drop-shadow(0 4px 24px rgba(var(--web-always-black),.85)) !important;",
+	"    filter: drop-shadow(0 4px 24px rgba(var(--web-always-black),.9)) !important;",
+	"}",
+	".x1wp8tw6 {",
+	"    box-shadow: 0 4px 12px rgba(var(--web-always-black),.9) !important;",
 	"}",
 	"/* \"Suggestions for you\" */",
 	"._aalf::before {",
@@ -183,6 +187,8 @@
 	"    --challenge-link: 219,219,219 !important;",
 	"    --docpen-lightgrey: 65,65,65 !important;", //modified
 	"    --feed-width-wide-story: 476px !important;", //modified
+	"    --grey-0: 12,12,12 !important;", //modified
+	"    --grey-1: 83,83,83 !important;", //modified
 	"    --ig-banner-background: 28,28,28 !important;", //modified
 	"    --ig-elevated-background: 28,28,28 !important;", //modified
 	"    --ig-elevated-highlight-background: #3c3c3c !important;", //modified
@@ -579,8 +585,8 @@
 	"    box-shadow: rgba(0,0,0,.9) 0 4px 22px !important;",
 	"}",
 	"/* Account mini previews */",
-	"._aap3, .x1rj4ezl {",
-	"    box-shadow: 0 0 5px 3px rgba(0, 0, 0, .9), 0 0 0 1px rgb(0, 0, 0) !important;",
+	".x1xcus5i {",
+	"    box-shadow: 0 0 23px rgba(var(--web-always-black),.9) !important;",
 	"}",
 	"/* There are some subtle circle borders in acc minipreviews */",
 	"._ab5d {",
@@ -672,7 +678,7 @@
 	"/* https://instagram.com/accounts/professional_account_settings/ */",
 	"/* Star symbol, used within new following menu of any acc */",
 	"/* Symbol for support notification, showing up in Notifications */",
-	"._9-z-, .glyphsSpriteCamera__outline__24__grey_9, ._9zlg, ._9zli, ._9zlh, .coreSpriteKeyhole, ._9zkj, ._9_1o, ._9-_z, ._9--3, ._9-_-, ._9--q, ._9-1a, .glyphsSpriteSearch__outline__24__grey_9, ._9_0y, ._9-ze, a > .xz74otr:not(.x10l6tqk) {",
+	"._9-z-, .glyphsSpriteCamera__outline__24__grey_9, ._9zlg, ._9zli, ._9zlh, .coreSpriteKeyhole, ._9zkj, ._9_1o, ._9-_z, ._9--3, ._9-_-, ._9--q, ._9-1a, .glyphsSpriteSearch__outline__24__grey_9, ._9_0y, ._9-ze, a > .xz74otr:not(.x10l6tqk):not(img) {",
 	"    filter: invert(1) !important;",
 	"}",
 	"/* Long lines in between accounts + color text for accounts, used here: https://instagram.com/accounts/login/ */",
